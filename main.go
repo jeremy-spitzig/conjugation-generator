@@ -17,5 +17,6 @@ func main() {
 	if err != nil {
 		log.Panicln(err)
 	}
-	fmt.Println(verbs)
+	fmt.Println(verbs[0].Conjugate())
+	//fmt.Println(verbs[0].Type)
 }
