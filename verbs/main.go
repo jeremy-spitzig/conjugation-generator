@@ -29,6 +29,22 @@ type VerbTense struct {
 	ThirdPersonPlural    string
 }
 
+type InfinitiveVerbTense struct {
+	Impersonal           string
+	SecondPersonSingular string
+	FirstPersonPlural    string
+	SecondPersonPlural   string
+	ThirdPersonPlural    string
+}
+
+type ImperativeVerbTense struct {
+	SecondPersonSingular string
+	ThirdPersonSingular  string
+	FirstPersonPlural    string
+	SecondPersonPlural   string
+	ThirdPersonPlural    string
+}
+
 type Conjugation struct {
 	IndicativoPresente                         VerbTense
 	IndicativoPretéritoPerfeito                VerbTense
@@ -48,11 +64,11 @@ type Conjugation struct {
 	SubjuntivoFuturoComposto                   VerbTense
 	CondicionalFuturoDoPretéritoSimples        VerbTense
 	FuturoDoPretéritoComposto                  VerbTense
-	// Infinitivo                                 VerbTense
-	// Imperativo                                 VerbTense
-	// ImperativoNegativo                         VerbTense
-	Gerúndio   string
-	Particípio string
+	Infinitivo                                 InfinitiveVerbTense
+	Imperativo                                 ImperativeVerbTense
+	ImperativoNegativo                         ImperativeVerbTense
+	Gerúndio                                   string
+	Particípio                                 string
 }
 
 // ReadVerbs reads in verb from the supplied filename
@@ -103,23 +119,34 @@ func arConjugation(stem string) *Conjugation {
 		SubjuntivoFuturoComposto:                   compoundVerbTenseSimple(stem, "tiver ", "tiveres ", "tiver ", "tivermos ", "tiverdes ", "tiverem ", "ado"),
 		CondicionalFuturoDoPretéritoSimples:        verbTense(stem, "aria", "arias", "aria", "aríamos", "aríeis", "ariam"),
 		FuturoDoPretéritoComposto:                  compoundVerbTenseSimple(stem, "teria ", "terias ", "teria ", "teríamos ", "teríeis ", "teriam ", "ado"),
-		// TODO: Restructure these into new struct(s?)
-		// Infinitivo:                                 verbTense(stem, "ar", "ares", "ar", "aremos", "areis", "arão"),
-		// Imperativo:                                 verbTense(stem, "arei", "arás", "ará", "aremos", "areis", "arão"),
-		// ImperativoNegativo:                         compoundVerbTenseSimple(stem, "arei", "arás", "ará", "aremos", "areis", "arão"),
-		Gerúndio:   stem + "ando",
-		Particípio: stem + "ado",
+		Infinitivo:                                 infinitiveVerbTense(stem, "ar", "ares", "armos", "ardes", "arem"),
+		Imperativo:                                 imperativeVerbTense(stem, "a", "e", "emos", "ai", "em"),
+		ImperativoNegativo:                         negativeImperativeVerbTense(stem, "a", "e", "emos", "ai", "em"),
+		Gerúndio:                                   stem + "ando",
+		Particípio:                                 stem + "ado",
 	}
 }
 
-func verbTense(stem string, fpsSuffix string, spsSuffix, tpsSuffix string, fppSuffix string, sppSuffix string, tppSuffix string) VerbTense {
+func verbTense(stem, fpsSuffix, spsSuffix, tpsSuffix, fppSuffix, sppSuffix, tppSuffix string) VerbTense {
 	return VerbTense{stem + fpsSuffix, stem + spsSuffix, stem + tpsSuffix, stem + fppSuffix, stem + sppSuffix, stem + tppSuffix}
 }
 
-func compoundVerbTense(stem string, fpsPrefix string, spsPrefix, tpsPrefix string, fppPrefix string, sppPrefix string, tppPrefix string, fpsSuffix string, spsSuffix, tpsSuffix string, fppSuffix string, sppSuffix string, tppSuffix string) VerbTense {
+func compoundVerbTense(stem, fpsPrefix, spsPrefix, tpsPrefix, fppPrefix, sppPrefix, tppPrefix, fpsSuffix, spsSuffix, tpsSuffix, fppSuffix, sppSuffix, tppSuffix string) VerbTense {
 	return VerbTense{fpsPrefix + stem + fpsSuffix, spsPrefix + stem + spsSuffix, tpsPrefix + stem + tpsSuffix, fppPrefix + stem + fppSuffix, sppPrefix + stem + sppSuffix, tppPrefix + stem + tppSuffix}
 }
 
-func compoundVerbTenseSimple(stem string, fpsPrefix string, spsPrefix, tpsPrefix string, fppPrefix string, sppPrefix string, tppPrefix string, suffix string) VerbTense {
-	return VerbTense{fpsPrefix + stem + suffix, spsPrefix + stem + suffix, tpsPrefix + stem + suffix, fppPrefix + stem + suffix, sppPrefix + stem + suffix, tppPrefix + stem + suffix}
+func compoundVerbTenseSimple(stem, fpsPrefix, spsPrefix, tpsPrefix, fppPrefix, sppPrefix, tppPrefix, suffix string) VerbTense {
+	return compoundVerbTense(stem, fpsPrefix, spsPrefix, tpsPrefix, fppPrefix, sppPrefix, tppPrefix, suffix, suffix, suffix, suffix, suffix, suffix)
+}
+
+func infinitiveVerbTense(stem, imp, spsSuffix, fppSuffix, sppSuffix, tppSuffix string) InfinitiveVerbTense {
+	return InfinitiveVerbTense{stem + imp, stem + spsSuffix, stem + fppSuffix, stem + sppSuffix, stem + tppSuffix}
+}
+
+func imperativeVerbTense(stem, spsSuffix, tpsSuffix, fppSuffix, sppSuffix, tppSuffix string) ImperativeVerbTense {
+	return ImperativeVerbTense{stem + spsSuffix, stem + tpsSuffix, stem + fppSuffix, stem + sppSuffix, stem + tppSuffix}
+}
+
+func negativeImperativeVerbTense(stem, spsSuffix, tpsSuffix, fppSuffix, sppSuffix, tppSuffix string) ImperativeVerbTense {
+	return ImperativeVerbTense{"não " + stem + spsSuffix, "não " + stem + tpsSuffix, "não " + stem + fppSuffix, "não " + stem + sppSuffix, "não " + stem + tppSuffix}
 }
