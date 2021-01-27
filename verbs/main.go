@@ -16,6 +16,7 @@ type Verb struct {
 	Past                        string `json:"past"`
 	ExampleComplement           string `json:"exampleComplement"`
 	PortugueseExampleComplement string `json:"portugueseExampleComplement"`
+	Type                        string `json:"type"`
 }
 
 // ReadVerbs reads in verb from the supplied filename

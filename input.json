@@ -8,7 +8,8 @@
     "gerund": "visiting",
     "past": "visited",
     "exampleComplement": "Idaho",
-    "portugueseExampleComplement": "Idaho"
+    "portugueseExampleComplement": "Idaho",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "encontrar",
@@ -19,7 +20,8 @@
     "gerund": "meeting",
     "past": "met",
     "exampleComplement": "Bruce Willis",
-    "portugueseExampleComplement": "o Bruce Willis"
+    "portugueseExampleComplement": "o Bruce Willis",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "ficar",
@@ -30,7 +32,8 @@
     "gerund": "staying",
     "past": "stayed",
     "exampleComplement": "here",
-    "portugueseExampleComplement": "aqui"
+    "portugueseExampleComplement": "aqui",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "abraçar",
@@ -41,7 +44,8 @@
     "gerund": "hugging",
     "past": "hugged",
     "exampleComplement": "a dog",
-    "portugueseExampleComplement": "um cachorro"
+    "portugueseExampleComplement": "um cachorro",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "cortar",
@@ -52,7 +56,8 @@
     "gerund": "cutting",
     "past": "cut",
     "exampleComplement": "the onion",
-    "portugueseExampleComplement": "a cebola"
+    "portugueseExampleComplement": "a cebola",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "jogar",
@@ -63,7 +68,8 @@
     "gerund": "playing",
     "past": "played",
     "exampleComplement": "the game",
-    "portugueseExampleComplement": "o jogo"
+    "portugueseExampleComplement": "o jogo",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "brincar",
@@ -74,7 +80,8 @@
     "gerund": "playing",
     "past": "played",
     "exampleComplement": "the game",
-    "portugueseExampleComplement": "o jogo"
+    "portugueseExampleComplement": "o jogo",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "pegar",
@@ -85,7 +92,8 @@
     "gerund": "catching",
     "past": "caught",
     "exampleComplement": "a tiger",
-    "portugueseExampleComplement": "um tigre"
+    "portugueseExampleComplement": "um tigre",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "esconder",
@@ -96,7 +104,8 @@
     "gerund": "hiding",
     "past": "hid",
     "exampleComplement": "the chocolate",
-    "portugueseExampleComplement": "o chocolate"
+    "portugueseExampleComplement": "o chocolate",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "morar",
@@ -107,7 +116,8 @@
     "gerund": "living",
     "past": "lived",
     "exampleComplement": "happily",
-    "portugueseExampleComplement": "felizamente"
+    "portugueseExampleComplement": "felizamente",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "aprender",
@@ -118,7 +128,8 @@
     "gerund": "learning",
     "past": "learned",
     "exampleComplement": "to swim",
-    "portugueseExampleComplement": "a nadar"
+    "portugueseExampleComplement": "a nadar",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "aceitar",
@@ -129,7 +140,8 @@
     "gerund": "accepting",
     "past": "accepted",
     "exampleComplement": "an idea",
-    "portugueseExampleComplement": "uma ideia"
+    "portugueseExampleComplement": "uma ideia",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "trabalhar",
@@ -139,8 +151,9 @@
     "thirdPersonPresent": "works",
     "gerund": "working",
     "past": "worked",
-    "exampleComplement": "cake",
-    "portugueseExampleComplement": "bolo"
+    "exampleComplement": "as an engineer",
+    "portugueseExampleComplement": "como um engenheiro",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "correr",
@@ -151,7 +164,8 @@
     "gerund": "running",
     "past": "ran",
     "exampleComplement": "to the pool",
-    "portugueseExampleComplement": "pra piscina"
+    "portugueseExampleComplement": "pra piscina",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "caçar",
@@ -162,7 +176,8 @@
     "gerund": "hunting",
     "past": "hunted",
     "exampleComplement": "the duck",
-    "portugueseExampleComplement": "o pato"
+    "portugueseExampleComplement": "o pato",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "escrever",
@@ -173,7 +188,8 @@
     "gerund": "writing",
     "past": "wrote",
     "exampleComplement": "a book",
-    "portugueseExampleComplement": "um livro"
+    "portugueseExampleComplement": "um livro",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "estudar",
@@ -184,7 +200,8 @@
     "gerund": "stuying",
     "past": "studied",
     "exampleComplement": "the letter",
-    "portugueseExampleComplement": "a carta"
+    "portugueseExampleComplement": "a carta",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "chegar",
@@ -195,7 +212,8 @@
     "gerund": "arriving",
     "past": "arrived",
     "exampleComplement": "in Brazil",
-    "portugueseExampleComplement": "no Brazil"
+    "portugueseExampleComplement": "no Brazil",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "acordar",
@@ -206,7 +224,8 @@
     "gerund": "waking up",
     "past": "woke up",
     "exampleComplement": "in the morning",
-    "portugueseExampleComplement": "na manhã"
+    "portugueseExampleComplement": "na manhã",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "gostar",
@@ -217,7 +236,8 @@
     "gerund": "liking",
     "past": "liked",
     "exampleComplement": "to eat",
-    "portugueseExampleComplement": "de comer"
+    "portugueseExampleComplement": "de comer",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "falar",
@@ -228,7 +248,8 @@
     "gerund": "speaking",
     "past": "spoke",
     "exampleComplement": "to the man",
-    "portugueseExampleComplement": "ao homem"
+    "portugueseExampleComplement": "ao homem",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "melhorar",
@@ -239,7 +260,8 @@
     "gerund": "improving",
     "past": "improved",
     "exampleComplement": "my Portuguese",
-    "portugueseExampleComplement": "meu Português"
+    "portugueseExampleComplement": "meu Português",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "conversar",
@@ -250,7 +272,8 @@
     "gerund": "talking",
     "past": "talked",
     "exampleComplement": "with the man",
-    "portugueseExampleComplement": "com o homem"
+    "portugueseExampleComplement": "com o homem",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "começar",
@@ -261,7 +284,8 @@
     "gerund": "beginning",
     "past": "began",
     "exampleComplement": "working",
-    "portugueseExampleComplement": "trabalhando"
+    "portugueseExampleComplement": "trabalhando",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "terminar",
@@ -272,7 +296,8 @@
     "gerund": "finishing",
     "past": "finished",
     "exampleComplement": "the book",
-    "portugueseExampleComplement": "o livro"
+    "portugueseExampleComplement": "o livro",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "almoçar",
@@ -283,7 +308,8 @@
     "gerund": "eating lunch",
     "past": "ate lunch",
     "exampleComplement": "at noon",
-    "portugueseExampleComplement": "ao meio dia"
+    "portugueseExampleComplement": "ao meio dia",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "achar",
@@ -294,7 +320,8 @@
     "gerund": "finding",
     "past": "found",
     "exampleComplement": "the key",
-    "portugueseExampleComplement": "a chave"
+    "portugueseExampleComplement": "a chave",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "entender",
@@ -305,7 +332,8 @@
     "gerund": "understanding",
     "past": "understood",
     "exampleComplement": "the sentence",
-    "portugueseExampleComplement": "a frase"
+    "portugueseExampleComplement": "a frase",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "viajar",
@@ -316,7 +344,8 @@
     "gerund": "traveling",
     "past": "traveled",
     "exampleComplement": "through the country",
-    "portugueseExampleComplement": "pelo país"
+    "portugueseExampleComplement": "pelo país",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "assistir",
@@ -327,7 +356,8 @@
     "gerund": "watching",
     "past": "watched",
     "exampleComplement": "Netflix",
-    "portugueseExampleComplement": "o Netflix"
+    "portugueseExampleComplement": "o Netflix",
+    "type": "ir"
   },
   {
     "portugueseInfinitive": "passear",
@@ -338,7 +368,8 @@
     "gerund": "walking",
     "past": "walked",
     "exampleComplement": "quickly",
-    "portugueseExampleComplement": "rapidamente"
+    "portugueseExampleComplement": "rapidamente",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "tomar",
@@ -349,7 +380,8 @@
     "gerund": "drinking",
     "past": "drank",
     "exampleComplement": "water",
-    "portugueseExampleComplement": "água"
+    "portugueseExampleComplement": "água",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "ajudar",
@@ -360,7 +392,8 @@
     "gerund": "helping",
     "past": "helped",
     "exampleComplement": "the sick dog",
-    "portugueseExampleComplement": "o cachorro doente"
+    "portugueseExampleComplement": "o cachorro doente",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "cuidar",
@@ -371,7 +404,8 @@
     "gerund": "taking care of",
     "past": "took care of",
     "exampleComplement": "a friend",
-    "portugueseExampleComplement": "um amigo"
+    "portugueseExampleComplement": "um amigo",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "ensinar",
@@ -382,7 +416,8 @@
     "gerund": "teaching",
     "past": "taught",
     "exampleComplement": "the class",
-    "portugueseExampleComplement": "o classe"
+    "portugueseExampleComplement": "o classe",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "abastecer",
@@ -393,7 +428,8 @@
     "gerund": "fueling",
     "past": "fueled",
     "exampleComplement": "the car",
-    "portugueseExampleComplement": "o carro"
+    "portugueseExampleComplement": "o carro",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "comercializar",
@@ -404,7 +440,8 @@
     "gerund": "commercializing",
     "past": "commercialized",
     "exampleComplement": "profitably",
-    "portugueseExampleComplement": "lucrativamente"
+    "portugueseExampleComplement": "lucrativamente",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "apoderar",
@@ -415,7 +452,8 @@
     "gerund": "taking control",
     "past": "took control",
     "exampleComplement": "of the store",
-    "portugueseExampleComplement": "da loja"
+    "portugueseExampleComplement": "da loja",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "engolir",
@@ -426,7 +464,8 @@
     "gerund": "swallowing",
     "past": "swallowed",
     "exampleComplement": "a pill",
-    "portugueseExampleComplement": "um comprimindo"
+    "portugueseExampleComplement": "um comprimindo",
+    "type": "ir"
   },
   {
     "portugueseInfinitive": "convidar",
@@ -437,7 +476,8 @@
     "gerund": "inviting",
     "past": "invited",
     "exampleComplement": "to my house",
-    "portugueseExampleComplement": "à minha casa"
+    "portugueseExampleComplement": "à minha casa",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "adorar",
@@ -448,7 +488,8 @@
     "gerund": "loving",
     "past": "loved",
     "exampleComplement": "the dinner",
-    "portugueseExampleComplement": "o jantar"
+    "portugueseExampleComplement": "o jantar",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "facilitar",
@@ -459,7 +500,8 @@
     "gerund": "facilitating",
     "past": "facilitated",
     "exampleComplement": "the meeting",
-    "portugueseExampleComplement": "a reunião"
+    "portugueseExampleComplement": "a reunião",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "contar",
@@ -470,7 +512,8 @@
     "gerund": "counting",
     "past": "counted",
     "exampleComplement": "the people",
-    "portugueseExampleComplement": "as pessoas"
+    "portugueseExampleComplement": "as pessoas",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "oferecer",
@@ -481,7 +524,8 @@
     "gerund": "offering",
     "past": "offered",
     "exampleComplement": "an idea",
-    "portugueseExampleComplement": "uma ideia"
+    "portugueseExampleComplement": "uma ideia",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "armar",
@@ -492,7 +536,8 @@
     "gerund": "arming",
     "past": "armed",
     "exampleComplement": "the weapon",
-    "portugueseExampleComplement": "a arma"
+    "portugueseExampleComplement": "a arma",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "vender",
@@ -503,7 +548,8 @@
     "gerund": "selling",
     "past": "sold",
     "exampleComplement": "vegetables",
-    "portugueseExampleComplement": "legumes"
+    "portugueseExampleComplement": "legumes",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "voltar",
@@ -514,7 +560,8 @@
     "gerund": "returning",
     "past": "returned",
     "exampleComplement": "home",
-    "portugueseExampleComplement": "para casa"
+    "portugueseExampleComplement": "para casa",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "desfilar",
@@ -525,7 +572,8 @@
     "gerund": "parading",
     "past": "paraded",
     "exampleComplement": "through the streets",
-    "portugueseExampleComplement": "pelas ruas"
+    "portugueseExampleComplement": "pelas ruas",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "realizar",
@@ -536,7 +584,8 @@
     "gerund": "performing",
     "past": "performed",
     "exampleComplement": "this operation",
-    "portugueseExampleComplement": "esta operação"
+    "portugueseExampleComplement": "esta operação",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "cantar",
@@ -547,7 +596,8 @@
     "gerund": "singing",
     "past": "sang",
     "exampleComplement": "a song",
-    "portugueseExampleComplement": "uma canção"
+    "portugueseExampleComplement": "uma canção",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "mexer",
@@ -558,7 +608,8 @@
     "gerund": "stirring",
     "past": "stirred",
     "exampleComplement": "the batter",
-    "portugueseExampleComplement": "a massa"
+    "portugueseExampleComplement": "a massa",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "passar",
@@ -569,7 +620,8 @@
     "gerund": "passing",
     "past": "passed",
     "exampleComplement": "by the store",
-    "portugueseExampleComplement": "pela loja"
+    "portugueseExampleComplement": "pela loja",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "pagar",
@@ -580,7 +632,8 @@
     "gerund": "paying",
     "past": "paid",
     "exampleComplement": "the bill",
-    "portugueseExampleComplement": "a conta"
+    "portugueseExampleComplement": "a conta",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "levar",
@@ -591,7 +644,8 @@
     "gerund": "taking",
     "past": "took",
     "exampleComplement": "an apple",
-    "portugueseExampleComplement": "uma macã"
+    "portugueseExampleComplement": "uma macã",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "olhar",
@@ -602,7 +656,8 @@
     "gerund": "looking",
     "past": "looked",
     "exampleComplement": "over there",
-    "portugueseExampleComplement": "lá"
+    "portugueseExampleComplement": "lá",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "desovar",
@@ -613,7 +668,8 @@
     "gerund": "liquidating",
     "past": "liquidated",
     "exampleComplement": "the products",
-    "portugueseExampleComplement": "os produtos"
+    "portugueseExampleComplement": "os produtos",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "descansar",
@@ -624,7 +680,8 @@
     "gerund": "resting",
     "past": "rested",
     "exampleComplement": "all day",
-    "portugueseExampleComplement": "o dia tudo"
+    "portugueseExampleComplement": "o dia tudo",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "aparecer",
@@ -635,7 +692,8 @@
     "gerund": "appearing",
     "past": "appeared",
     "exampleComplement": "in front of me",
-    "portugueseExampleComplement": "na minha frente"
+    "portugueseExampleComplement": "na minha frente",
+    "type": "er"
   },
   {
     "portugueseInfinitive": "significar",
@@ -646,7 +704,8 @@
     "gerund": "meaning",
     "past": "meant",
     "exampleComplement": "the truth",
-    "portugueseExampleComplement": "a verdade"
+    "portugueseExampleComplement": "a verdade",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "separar",
@@ -657,7 +716,8 @@
     "gerund": "separating",
     "past": "separated",
     "exampleComplement": "the slices",
-    "portugueseExampleComplement": "as fatias"
+    "portugueseExampleComplement": "as fatias",
+    "type": "ar"
   },
   {
     "portugueseInfinitive": "fritar",
@@ -668,6 +728,7 @@
     "gerund": "frying",
     "past": "fried",
     "exampleComplement": "an onion",
-    "portugueseExampleComplement": "uma cebola"
+    "portugueseExampleComplement": "uma cebola",
+    "type": "ar"
   }
 ]
