@@ -91,7 +91,7 @@ func (v Verb) Conjugate() (*Conjugation, error) {
 	// Stem = infinitive - last 2 characters (ar/er/ir)
 	// TODO: Maybe better to pull stem out to a separate attribute for irregulars,
 	// They're going to have specialized conjugation anyway, so might not be worth it
-	stem := v.Infinitive[:len(v.Infinitive)-2]
+	stem := v.PortugueseInfinitive[:len(v.PortugueseInfinitive)-2]
 	switch v.Type {
 	case "ar":
 		return arConjugation(stem), nil
