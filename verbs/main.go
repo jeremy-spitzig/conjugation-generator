@@ -95,6 +95,10 @@ func (v Verb) Conjugate() (*Conjugation, error) {
 	switch v.Type {
 	case "ar":
 		return arConjugation(stem), nil
+	case "er":
+		return erConjugation(stem), nil
+	case "ir":
+		return irConjugation(stem), nil
 	}
 	return nil, fmt.Errorf("Unrecognized verb type %s", v.Type)
 }
@@ -107,10 +111,10 @@ func arConjugation(stem string) *Conjugation {
 		IndicativoPretéritoMaisQuePerfeito:         verbTense(stem, "ara", "aras", "ara", "áramos", "áreis", "aram"),
 		IndicativoPretéritoPerfeitoComposto:        compoundVerbTenseSimple(stem, "tenho ", "tens ", "tem ", "temos ", "tendes ", "têm ", "ado"),
 		IndicativoPretéritoMaisQuePerfeitoComposto: compoundVerbTenseSimple(stem, "tinha ", "tinhas ", "tinha ", "tínhamos ", "tínheis ", "tinham ", "ado"),
-		IndicativoPretéritoMaisQuePerfeitoAnterior: compoundVerbTenseSimple(stem, "tivera ", "tiveras ", "tivera ", "tivévamos ", "tivéreis ", "tiveram ", "ado"),
+		IndicativoPretéritoMaisQuePerfeitoAnterior: compoundVerbTenseSimple(stem, "tivera ", "tiveras ", "tivera ", "tivéramos ", "tivéreis ", "tiveram ", "ado"),
 		IndicativoFuturoDoPresenteSimples:          verbTense(stem, "arei", "arás", "ará", "aremos", "areis", "arão"),
 		IndicativoFuturoCompostoComIr:              compoundVerbTenseSimple(stem, "vou ", "vais ", "vai ", "vamos ", "ides ", "vão ", "ar"),
-		IndicativoFuturoDoPresenteComposto:         compoundVerbTenseSimple(stem, "tenha ", "tenhas ", "tenha ", "tenhamos ", "tenhais ", "tenham ", "ado"),
+		IndicativoFuturoDoPresenteComposto:         compoundVerbTenseSimple(stem, "terei ", "terás ", "terá ", "teremos ", "tereis ", "terão ", "ado"),
 		SubjuntivoPresente:                         verbTense(stem, "e", "es", "e", "emos", "eis", "em"),
 		SubjuntivoPretéritoPerfeito:                compoundVerbTenseSimple(stem, "tenha ", "tenhas ", "tenha ", "tenhamos ", "tenhais ", "tenham ", "ado"),
 		SubjuntivoPretéritoImperfeito:              verbTense(stem, "asse", "asses", "asse", "ássemos", "ásseis", "assem"),
@@ -121,9 +125,65 @@ func arConjugation(stem string) *Conjugation {
 		FuturoDoPretéritoComposto:                  compoundVerbTenseSimple(stem, "teria ", "terias ", "teria ", "teríamos ", "teríeis ", "teriam ", "ado"),
 		Infinitivo:                                 infinitiveVerbTense(stem, "ar", "ares", "armos", "ardes", "arem"),
 		Imperativo:                                 imperativeVerbTense(stem, "a", "e", "emos", "ai", "em"),
-		ImperativoNegativo:                         negativeImperativeVerbTense(stem, "a", "e", "emos", "ai", "em"),
+		ImperativoNegativo:                         negativeImperativeVerbTense(stem, "es", "e", "emos", "eis", "em"),
 		Gerúndio:                                   stem + "ando",
 		Particípio:                                 stem + "ado",
+	}
+}
+
+func erConjugation(stem string) *Conjugation {
+	return &Conjugation{
+		IndicativoPresente:                         verbTense(stem, "o", "es", "e", "emos", "eis", "em"),
+		IndicativoPretéritoPerfeito:                verbTense(stem, "i", "este", "eu", "emos", "estes", "eram"),
+		IndicativoPretéritoImperfeito:              verbTense(stem, "ia", "ias", "ia", "íamos", "íeis", "iam"),
+		IndicativoPretéritoMaisQuePerfeito:         verbTense(stem, "era", "eras", "era", "êramos", "êreis", "eram"),
+		IndicativoPretéritoPerfeitoComposto:        compoundVerbTenseSimple(stem, "tenho ", "tens ", "tem ", "temos ", "tendes ", "têm ", "ido"),
+		IndicativoPretéritoMaisQuePerfeitoComposto: compoundVerbTenseSimple(stem, "tinha ", "tinhas ", "tinha ", "tínhamos ", "tínheis ", "tinham ", "ido"),
+		IndicativoPretéritoMaisQuePerfeitoAnterior: compoundVerbTenseSimple(stem, "tivera ", "tiveras ", "tivera ", "tivéramos ", "tivéreis ", "tiveram ", "ido"),
+		IndicativoFuturoDoPresenteSimples:          verbTense(stem, "erei", "erás", "erá", "eremos", "ereis", "erão"),
+		IndicativoFuturoCompostoComIr:              compoundVerbTenseSimple(stem, "vou ", "vais ", "vai ", "vamos ", "ides ", "vão ", "er"),
+		IndicativoFuturoDoPresenteComposto:         compoundVerbTenseSimple(stem, "terei ", "terás ", "terá ", "teremos ", "tereis ", "terão ", "ido"),
+		SubjuntivoPresente:                         verbTense(stem, "a", "as", "a", "amos", "ais", "am"),
+		SubjuntivoPretéritoPerfeito:                compoundVerbTenseSimple(stem, "tenha ", "tenhas ", "tenha ", "tenhamos ", "tenhais ", "tenham ", "ido"),
+		SubjuntivoPretéritoImperfeito:              verbTense(stem, "esse", "esses", "esse", "êssemos", "êsseis", "essem"),
+		SubjuntivoPretéritoMaisQuePerfeitoComposto: compoundVerbTenseSimple(stem, "tivesse ", "tivesses ", "tivesse ", "tivéssemos ", "tivésseis ", "tivessem ", "ido"),
+		SubjuntivoFuturo:                           verbTense(stem, "er", "eres", "er", "ermos", "erdes", "erem"),
+		SubjuntivoFuturoComposto:                   compoundVerbTenseSimple(stem, "tiver ", "tiveres ", "tiver ", "tivermos ", "tiverdes ", "tiverem ", "ido"),
+		CondicionalFuturoDoPretéritoSimples:        verbTense(stem, "eria", "erias", "eria", "eríamos", "eríeis", "eriam"),
+		FuturoDoPretéritoComposto:                  compoundVerbTenseSimple(stem, "teria ", "terias ", "teria ", "teríamos ", "teríeis ", "teriam ", "ido"),
+		Infinitivo:                                 infinitiveVerbTense(stem, "er", "eres", "ermos", "erdes", "erem"),
+		Imperativo:                                 imperativeVerbTense(stem, "e", "a", "amos", "ei", "am"),
+		ImperativoNegativo:                         negativeImperativeVerbTense(stem, "as", "a", "amos", "ais", "am"),
+		Gerúndio:                                   stem + "endo",
+		Particípio:                                 stem + "ido",
+	}
+}
+
+func irConjugation(stem string) *Conjugation {
+	return &Conjugation{
+		IndicativoPresente:                         verbTense(stem, "o", "es", "e", "imos", "is", "em"),
+		IndicativoPretéritoPerfeito:                verbTense(stem, "i", "iste", "iu", "imos", "istes", "iram"),
+		IndicativoPretéritoImperfeito:              verbTense(stem, "ia", "ias", "ia", "íamos", "íeis", "íam"),
+		IndicativoPretéritoMaisQuePerfeito:         verbTense(stem, "ira", "iras", "ira", "íramos", "íreis", "iram"),
+		IndicativoPretéritoPerfeitoComposto:        compoundVerbTenseSimple(stem, "tenho ", "tens ", "tem ", "temos ", "tendes ", "têm ", "ido"),
+		IndicativoPretéritoMaisQuePerfeitoComposto: compoundVerbTenseSimple(stem, "tinha ", "tinhas ", "tinha ", "tínhamos ", "tínheis ", "tinham ", "ido"),
+		IndicativoPretéritoMaisQuePerfeitoAnterior: compoundVerbTenseSimple(stem, "tivera ", "tiveras ", "tivera ", "tivéramos ", "tivéreis ", "tiveram ", "ido"),
+		IndicativoFuturoDoPresenteSimples:          verbTense(stem, "irei", "irás", "irá", "iremos", "ireis", "irão"),
+		IndicativoFuturoCompostoComIr:              compoundVerbTenseSimple(stem, "vou ", "vais ", "vai ", "vamos ", "ides ", "vão ", "ir"),
+		IndicativoFuturoDoPresenteComposto:         compoundVerbTenseSimple(stem, "terei ", "terás ", "terá ", "teremos ", "tereis ", "terão ", "ido"),
+		SubjuntivoPresente:                         verbTense(stem, "a", "as", "a", "amos", "ais", "am"),
+		SubjuntivoPretéritoPerfeito:                compoundVerbTenseSimple(stem, "tenha ", "tenhas ", "tenha ", "tenhamos ", "tenhais ", "tenham ", "ido"),
+		SubjuntivoPretéritoImperfeito:              verbTense(stem, "isse", "isses", "isse", "íssemos", "ísseis", "issem"),
+		SubjuntivoPretéritoMaisQuePerfeitoComposto: compoundVerbTenseSimple(stem, "tivesse ", "tivesses ", "tivesse ", "tivéssemos ", "tivésseis ", "tivessem ", "ido"),
+		SubjuntivoFuturo:                           verbTense(stem, "ir", "ires", "ir", "irmos", "irdes", "irem"),
+		SubjuntivoFuturoComposto:                   compoundVerbTenseSimple(stem, "tiver ", "tiveres ", "tiver ", "tivermos ", "tiverdes ", "tiverem ", "ido"),
+		CondicionalFuturoDoPretéritoSimples:        verbTense(stem, "iria", "irias", "iria", "iríamos", "iríeis", "iriam"),
+		FuturoDoPretéritoComposto:                  compoundVerbTenseSimple(stem, "teria ", "terias ", "teria ", "teríamos ", "teríeis ", "teriam ", "ido"),
+		Infinitivo:                                 infinitiveVerbTense(stem, "ir", "ares", "irmos", "irdes", "irem"),
+		Imperativo:                                 imperativeVerbTense(stem, "e", "a", "amos", "i", "am"),
+		ImperativoNegativo:                         negativeImperativeVerbTense(stem, "as", "a", "amos", "ais", "am"),
+		Gerúndio:                                   stem + "indo",
+		Particípio:                                 stem + "ido",
 	}
 }
 
