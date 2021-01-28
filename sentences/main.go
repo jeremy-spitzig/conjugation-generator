@@ -54,6 +54,8 @@ func GenerateSentences(v verbs.Verb) ([]Sentence, error) {
 		indicativoPretéritoImperfeitoSentences(v, c),
 		indicativoFuturoDoPresenteSimplesSentences(v, c),
 		indicativoFuturoCompostoComIrSentences(v, c),
+		subjuntivoPresenteSentences(v, c),
+		subjuntivoFuturoSentences(v, c),
 	}
 
 	sentences := []Sentence{}
@@ -76,7 +78,7 @@ func indicativoPretéritoPerfeitoSentences(v verbs.Verb, c *verbs.Conjugation) [
 func indicativoPretéritoImperfeitoSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
 	vf := "used to " + v.Present
 	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
-	return sentences(v, et, c.IndicativoPretéritoImperfeito, "As a child, ", "", "Como uma criança, ", "")
+	return sentences(v, et, c.IndicativoPretéritoImperfeito, "Back in the day, ", "", "Antigamente, ", "")
 }
 
 func indicativoFuturoDoPresenteSimplesSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
@@ -89,6 +91,17 @@ func indicativoFuturoCompostoComIrSentences(v verbs.Verb, c *verbs.Conjugation) 
 	vf := "will(2) " + v.Present
 	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
 	return sentences(v, et, c.IndicativoFuturoCompostoComIr, "", "", "", "")
+}
+
+func subjuntivoPresenteSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	vf := "will " + v.Present
+	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
+	return sentences(v, et, c.SubjuntivoPresente, "Maybe ", "", "Talvez ", "")
+}
+
+func subjuntivoFuturoSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	et := verbs.VerbTense{v.Present, v.Present, v.ThirdPersonPresent, v.Present, v.Present, v.Present}
+	return sentences(v, et, c.SubjuntivoFuturo, "When ", ", there will be peace", "Quando ", ", haverá paz")
 }
 
 func sentences(v verbs.Verb, et verbs.VerbTense, pt verbs.VerbTense, epfx string, esfx string, ppfx string, psfx string) []Sentence {

@@ -36,7 +36,7 @@ func main() {
 			log.Panicln(err)
 		}
 		for _, s := range gs {
-			fmt.Fprint(of, s.English, ",", s.Português, "\n")
+			fmt.Fprint(of, s.English, ";", s.Português, "\n")
 		}
 	}
 }

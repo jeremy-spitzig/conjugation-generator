@@ -53,14 +53,14 @@ type Conjugation struct {
 	IndicativoPretéritoPerfeitoComposto        VerbTense
 	IndicativoPretéritoMaisQuePerfeitoComposto VerbTense
 	IndicativoPretéritoMaisQuePerfeitoAnterior VerbTense
-	IndicativoFuturoDoPresenteSimples          VerbTense
-	IndicativoFuturoCompostoComIr              VerbTense
+	IndicativoFuturoDoPresenteSimples          VerbTense //Finished
+	IndicativoFuturoCompostoComIr              VerbTense //Finished
 	IndicativoFuturoDoPresenteComposto         VerbTense
-	SubjuntivoPresente                         VerbTense
+	SubjuntivoPresente                         VerbTense //Finished
 	SubjuntivoPretéritoPerfeito                VerbTense
 	SubjuntivoPretéritoImperfeito              VerbTense
 	SubjuntivoPretéritoMaisQuePerfeitoComposto VerbTense
-	SubjuntivoFuturo                           VerbTense
+	SubjuntivoFuturo                           VerbTense //Finished
 	SubjuntivoFuturoComposto                   VerbTense
 	CondicionalFuturoDoPretéritoSimples        VerbTense
 	FuturoDoPretéritoComposto                  VerbTense
@@ -107,7 +107,7 @@ func (v Verb) Conjugate() (*Conjugation, error) {
 func arConjugation(stem string) *Conjugation {
 	return &Conjugation{
 		IndicativoPresente:                         verbTense(stem, "o", "as", "a", "amos", "ais", "am"),
-		IndicativoPretéritoPerfeito:                verbTense(stem, "ei", "aste", "ou", "ámos", "astes", "aram"),
+		IndicativoPretéritoPerfeito:                verbTense(stem, "ei", "aste", "ou", "amos", "astes", "aram"),
 		IndicativoPretéritoImperfeito:              verbTense(stem, "ava", "avas", "ava", "ávamos", "áveis", "avam"),
 		IndicativoPretéritoMaisQuePerfeito:         verbTense(stem, "ara", "aras", "ara", "áramos", "áreis", "aram"),
 		IndicativoPretéritoPerfeitoComposto:        compoundVerbTenseSimple(stem, "tenho ", "tens ", "tem ", "temos ", "tendes ", "têm ", "ado"),
