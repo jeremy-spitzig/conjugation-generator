@@ -77,6 +77,7 @@ func ReadVerbs(fn string) ([]Verb, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer file.Close()
 	var verbs []Verb
 
 	decoder := json.NewDecoder(file)
