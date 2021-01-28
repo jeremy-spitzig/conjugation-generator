@@ -2,6 +2,7 @@ package sentences
 
 import (
 	"log"
+	"strings"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 )
@@ -84,19 +85,25 @@ func sentences(v verbs.Verb, et verbs.VerbTense, pt verbs.VerbTense, epfx string
 }
 
 func sentence(s string, p person, plural bool, c string, t verbs.VerbTense, pfx string, sfx string) string {
+	var subject string
+	if pfx != "" && s != "I" {
+		subject = strings.ToLower(string(s[0])) + s[1:]
+	} else {
+		subject = s
+	}
 	switch {
 	case p == first && !plural:
-		return pfx + s + " " + t.FirstPersonSingular + " " + c + sfx
+		return pfx + subject + " " + t.FirstPersonSingular + " " + c + sfx
 	case p == second && !plural:
-		return pfx + s + " " + t.SecondPersonSingular + " " + c + sfx
+		return pfx + subject + " " + t.SecondPersonSingular + " " + c + sfx
 	case p == third && !plural:
-		return pfx + s + " " + t.ThirdPersonSingular + " " + c + sfx
+		return pfx + subject + " " + t.ThirdPersonSingular + " " + c + sfx
 	case p == first && plural:
-		return pfx + s + " " + t.FirstPersonPlural + " " + c + sfx
+		return pfx + subject + " " + t.FirstPersonPlural + " " + c + sfx
 	case p == second && plural:
-		return pfx + s + " " + t.SecondPersonPlural + " " + c + sfx
+		return pfx + subject + " " + t.SecondPersonPlural + " " + c + sfx
 	case p == third && plural:
-		return pfx + s + " " + t.ThirdPersonPlural + " " + c + sfx
+		return pfx + subject + " " + t.ThirdPersonPlural + " " + c + sfx
 	}
 	return ""
 
