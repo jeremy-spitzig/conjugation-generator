@@ -46,9 +46,9 @@ type ImperativeVerbTense struct {
 }
 
 type Conjugation struct {
-	IndicativoPresente                         VerbTense
-	IndicativoPretéritoPerfeito                VerbTense
-	IndicativoPretéritoImperfeito              VerbTense
+	IndicativoPresente                         VerbTense //Finished
+	IndicativoPretéritoPerfeito                VerbTense //Finished
+	IndicativoPretéritoImperfeito              VerbTense //Finished
 	IndicativoPretéritoMaisQuePerfeito         VerbTense
 	IndicativoPretéritoPerfeitoComposto        VerbTense
 	IndicativoPretéritoMaisQuePerfeitoComposto VerbTense

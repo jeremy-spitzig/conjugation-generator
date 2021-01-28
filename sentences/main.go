@@ -48,12 +48,19 @@ func GenerateSentences(v verbs.Verb) ([]Sentence, error) {
 		return nil, err
 	}
 
-	return append(append(
+	groupedSentences := [][]Sentence{
 		indicativoPresenteSentences(v, c),
-		indicativoPretéritoPerfeitoSentences(v, c)...),
-		indicativoPretéritoImperfeitoSentences(v, c)...,
-	), nil
+		indicativoPretéritoPerfeitoSentences(v, c),
+		indicativoPretéritoImperfeitoSentences(v, c),
+		indicativoFuturoDoPresenteSimplesSentences(v, c),
+		indicativoFuturoCompostoComIrSentences(v, c),
+	}
 
+	sentences := []Sentence{}
+	for _, group := range groupedSentences {
+		sentences = append(sentences, group...)
+	}
+	return sentences, nil
 }
 
 func indicativoPresenteSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
@@ -70,6 +77,18 @@ func indicativoPretéritoImperfeitoSentences(v verbs.Verb, c *verbs.Conjugation)
 	vf := "used to " + v.Present
 	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
 	return sentences(v, et, c.IndicativoPretéritoImperfeito, "As a child, ", "", "Como uma criança, ", "")
+}
+
+func indicativoFuturoDoPresenteSimplesSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	vf := "will(1) " + v.Present
+	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
+	return sentences(v, et, c.IndicativoFuturoDoPresenteSimples, "", "", "", "")
+}
+
+func indicativoFuturoCompostoComIrSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	vf := "will(2) " + v.Present
+	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
+	return sentences(v, et, c.IndicativoFuturoCompostoComIr, "", "", "", "")
 }
 
 func sentences(v verbs.Verb, et verbs.VerbTense, pt verbs.VerbTense, epfx string, esfx string, ppfx string, psfx string) []Sentence {
