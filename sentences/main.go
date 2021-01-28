@@ -47,41 +47,57 @@ func GenerateSentences(v verbs.Verb) ([]Sentence, error) {
 		return nil, err
 	}
 
-	return indicativePresentTenseSentences(v, c), nil
+	return append(append(
+		indicativoPresenteSentences(v, c),
+		indicativoPretéritoPerfeitoSentences(v, c)...),
+		indicativoPretéritoImperfeitoSentences(v, c)...,
+	), nil
 
 }
 
-func indicativePresentTenseSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+func indicativoPresenteSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	et := verbs.VerbTense{v.Present, v.Present, v.ThirdPersonPresent, v.Present, v.Present, v.Present}
+	return sentences(v, et, c.IndicativoPresente, "", "", "", "")
+}
+
+func indicativoPretéritoPerfeitoSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	et := verbs.VerbTense{v.Past, v.Past, v.Past, v.Past, v.Past, v.Past}
+	return sentences(v, et, c.IndicativoPretéritoPerfeito, "", "", "", "")
+}
+
+func indicativoPretéritoImperfeitoSentences(v verbs.Verb, c *verbs.Conjugation) []Sentence {
+	vf := "used to " + v.Present
+	et := verbs.VerbTense{vf, vf, vf, vf, vf, vf}
+	return sentences(v, et, c.IndicativoPretéritoImperfeito, "As a child, ", "", "Como uma criança, ", "")
+}
+
+func sentences(v verbs.Verb, et verbs.VerbTense, pt verbs.VerbTense, epfx string, esfx string, ppfx string, psfx string) []Sentence {
 	sentences := make([]Sentence, len(subjects))
 	var es string
 	var ps string
-	for i, subject := range subjects {
-		if subject.englishPerson == third && !subject.plural {
-			es = subject.english + " " + v.ThirdPersonPresent + " " + v.ExampleComplement
-		} else {
-			es = subject.english + " " + v.Present + " " + v.ExampleComplement
-		}
-
-		ps = portuguêsSentence(subject, v, c.IndicativoPresente)
+	for i, s := range subjects {
+		es = sentence(s.english, s.englishPerson, s.plural, v.ExampleComplement, et, epfx, esfx)
+		ps = sentence(s.português, s.portuguesePerson, s.plural, v.PortugueseExampleComplement, pt, ppfx, psfx)
 		sentences[i] = Sentence{es, ps}
 	}
 	return sentences
 }
 
-func portuguêsSentence(s subject, v verbs.Verb, t verbs.VerbTense) string {
+func sentence(s string, p person, plural bool, c string, t verbs.VerbTense, pfx string, sfx string) string {
 	switch {
-	case s.portuguesePerson == first && !s.plural:
-		return s.português + " " + t.FirstPersonSingular + " " + v.PortugueseExampleComplement
-	case s.portuguesePerson == second && !s.plural:
-		return s.português + " " + t.SecondPersonSingular + " " + v.PortugueseExampleComplement
-	case s.portuguesePerson == third && !s.plural:
-		return s.português + " " + t.ThirdPersonSingular + " " + v.PortugueseExampleComplement
-	case s.portuguesePerson == first && s.plural:
-		return s.português + " " + t.FirstPersonPlural + " " + v.PortugueseExampleComplement
-	case s.portuguesePerson == second && s.plural:
-		return s.português + " " + t.SecondPersonPlural + " " + v.PortugueseExampleComplement
-	case s.portuguesePerson == third && s.plural:
-		return s.português + " " + t.ThirdPersonPlural + " " + v.PortugueseExampleComplement
+	case p == first && !plural:
+		return pfx + s + " " + t.FirstPersonSingular + " " + c + sfx
+	case p == second && !plural:
+		return pfx + s + " " + t.SecondPersonSingular + " " + c + sfx
+	case p == third && !plural:
+		return pfx + s + " " + t.ThirdPersonSingular + " " + c + sfx
+	case p == first && plural:
+		return pfx + s + " " + t.FirstPersonPlural + " " + c + sfx
+	case p == second && plural:
+		return pfx + s + " " + t.SecondPersonPlural + " " + c + sfx
+	case p == third && plural:
+		return pfx + s + " " + t.ThirdPersonPlural + " " + c + sfx
 	}
 	return ""
+
 }
