@@ -6,6 +6,7 @@ import (
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 )
@@ -17,7 +18,7 @@ func main() {
 				Name:  "language-pack",
 				Aliases: []string{"lp"},
 				Value: "./default-language-pack/",
-				Usage: "Load input from `FILE`",
+				Usage: "Load language pack from `SOURCE`",
 			},
 			&cli.StringFlag{
 				Name:  "outputFile",
@@ -37,9 +38,18 @@ func main() {
 
 func action(c *cli.Context) error {
 
-	lpd := c.String("language-pack")
+	lps := c.String("language-pack")
+	var lp languagepack.LanguagePack
+	if(strings.HasPrefix(lps, "https://")) {
+		glp, err := languagepack.NewGit(lps)
+		if err != nil {
+			return err
+		}
+		lp = glp
+	} else {
+		lp = languagepack.NewFileSystem(lps)
+	}
 
-	lp := languagepack.NewFileSystem(lpd)
 	defer lp.Close()
 
 	m, err := verbs.LoadModels(lp)
