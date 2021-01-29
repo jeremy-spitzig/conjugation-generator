@@ -1,7 +1,6 @@
 package sentences
 
 import (
-	"log"
 	"strings"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
@@ -39,14 +38,7 @@ var subjects []subject = []subject{
 	{"The gals", "Elas", third, third, true},
 }
 
-func GenerateSentences(v verbs.Verb) ([]Sentence, error) {
-
-	c, err := v.Conjugate()
-
-	if err != nil {
-		log.Printf("Failed to conjugate %s\n", v.PortugueseInfinitive)
-		return nil, err
-	}
+func GenerateSentences(v verbs.Verb, c *verbs.Conjugation) ([]Sentence, error) {
 
 	groupedSentences := [][]Sentence{
 		indicativoPresenteSentences(v, c),

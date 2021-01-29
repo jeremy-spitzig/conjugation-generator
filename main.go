@@ -16,7 +16,7 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:  "input",
-				Value: "./input.json",
+				Value: "./default-input.json",
 				Usage: "Load input from `FILE`",
 			},
 			&cli.StringFlag{
@@ -29,6 +29,11 @@ func main() {
 				Value: ".csv",
 				Usage: "The extension of the filenames for output files",
 			},
+			&cli.StringFlag{
+				Name:  "modelsDir",
+				Value: "./default-verb-models",
+				Usage: "Directory containing verb model files",
+			},
 		},
 		Action: action,
 	}
@@ -40,6 +45,13 @@ func main() {
 }
 
 func action(c *cli.Context) error {
+
+	md := c.String("modelsDir")
+	m, err := verbs.LoadModels(md)
+
+	if err != nil {
+		return err
+	}
 
 	ifn := c.String("input")
 	ofn := c.String("outputFileBase")
@@ -60,7 +72,11 @@ func action(c *cli.Context) error {
 	lines := 0
 
 	for _, v := range verbs {
-		gs, err := sentences.GenerateSentences(v)
+		c, err := m.Conjugate(v)
+		if err != nil {
+			return err
+		}
+		gs, err := sentences.GenerateSentences(v, c)
 		if err != nil {
 			return err
 		}
