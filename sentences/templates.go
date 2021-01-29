@@ -1,9 +1,10 @@
 package sentences
 
 import (
+	"github.com/jeremy-spitzig/conjugation-generator/languagepack"
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 	"io"
-	"path/filepath"
+	"strings"
 	"text/template"
 )
 
@@ -16,18 +17,23 @@ type templateData struct{
 	Tense interface{}
 }
 
-func LoadTemplates(td string) (*Templates, error) {
-	glob := filepath.Join(td, "*.tmpl")
-	t, err := template.New("").ParseGlob(glob)
+func LoadTemplates(pack languagepack.LanguagePack) (*Templates, error) {
+	t := template.New("")
+	tis, err := pack.Templates()
 	if err != nil {
 		return nil, err
+	}
+	for _, ti := range tis {
+		buf := new(strings.Builder)
+		io.Copy(buf, ti.Reader)
+		t.New(ti.Name).Parse(buf.String())
 	}
 	return &Templates{t}, nil
 }
 
 func (t *Templates) Execute(v verbs.Verb, c *verbs.Conjugation, w io.Writer) error {
 	for _, t := range t.template.Templates() {
-		tn := t.Name()[:len(t.Name()) - 5]
+		tn := t.Name()
 		vt, err := c.Tense(tn)
 		if err != nil {
 			return err

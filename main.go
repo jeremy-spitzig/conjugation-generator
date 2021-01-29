@@ -1,12 +1,11 @@
 package main
 
 import (
-	"log"
-	"os"
-	"path/filepath"
-
+	"github.com/jeremy-spitzig/conjugation-generator/languagepack"
 	"github.com/jeremy-spitzig/conjugation-generator/sentences"
 	"github.com/urfave/cli/v2"
+	"log"
+	"os"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 )
@@ -40,20 +39,20 @@ func action(c *cli.Context) error {
 
 	lpd := c.String("language-pack")
 
-	md := filepath.Join(lpd, "models")
-	m, err := verbs.LoadModels(md)
+	lp := languagepack.NewFileSystem(lpd)
+	defer lp.Close()
+
+	m, err := verbs.LoadModels(lp)
 	if err != nil {
 		return err
 	}
 
-	td := filepath.Join(lpd, "templates")
-	t, err := sentences.LoadTemplates(td)
+	t, err := sentences.LoadTemplates(lp)
 	if err != nil {
 		return err
 	}
 
-	vfn := filepath.Join(lpd, "verbs.json")
-	verbs, err := verbs.ReadVerbs(vfn)
+	verbs, err := verbs.ReadVerbs(lp)
 	if err != nil {
 		return err
 	}
