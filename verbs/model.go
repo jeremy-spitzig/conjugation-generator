@@ -32,7 +32,7 @@ type modelFile struct {
 // Models methods
 
 func (ms *Models) Conjugate(v Verb) (*Conjugation, error) {
-	if m, ok := ms.models[v.Type]; ok {
+	if m, ok := ms.models[v.Model]; ok {
 		capture, err := regexp.Compile(m.Capture)
 		if err != nil {
 			return nil, err
@@ -87,7 +87,7 @@ func (ms *Models) Conjugate(v Verb) (*Conjugation, error) {
 			Particípio:                                 capture.ReplaceAllString(v.PortugueseInfinitive, m.Tenses["particípio"].Forms[0]),
 		}, nil
 	} else {
-		return nil, fmt.Errorf("Unrecognized verb type %s", v.Type)
+		return nil, fmt.Errorf("Unrecognized verb type %s", v.Model)
 	}
 }
 
