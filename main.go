@@ -6,33 +6,55 @@ import (
 	"os"
 
 	"github.com/jeremy-spitzig/conjugation-generator/sentences"
+	"github.com/urfave/cli"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 )
 
 func main() {
-	ifn := os.Getenv("VERB_INPUT_FILE")
-	ofn := os.Getenv("SENTENCE_OUTPUT_FILE")
-	ofe := os.Getenv("SENTENCE_OUTPUT_EXT")
-	if ifn == "" {
-		ifn = "./input.json"
+	app := &cli.App{
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:  "input",
+				Value: "./input.json",
+				Usage: "Load input from `FILE`",
+			},
+			&cli.StringFlag{
+				Name:  "outputFileBase",
+				Value: "output",
+				Usage: "The base of the filenames for output files",
+			},
+			&cli.StringFlag{
+				Name:  "outputFileExtension",
+				Value: ".csv",
+				Usage: "The extension of the filenames for output files",
+			},
+		},
+		Action: action,
 	}
-	if ofn == "" {
-		ofn = "./output"
+
+	err := app.Run(os.Args)
+	if err != nil {
+		log.Fatal(err)
 	}
-	if ofe == "" {
-		ofe = ".csv"
-	}
+}
+
+func action(c *cli.Context) error {
+
+	ifn := c.String("input")
+	ofn := c.String("outputFileBase")
+	ofe := c.String("outputFileExtension")
+
 	verbs, err := verbs.ReadVerbs(ifn)
 	if err != nil {
-		log.Panicln(err)
+		return err
 	}
 
 	index := 1
 
 	of, err := getFile(ofn, ofe, index)
 	if err != nil {
-		log.Panicln(err)
+		return err
 	}
 
 	lines := 0
@@ -40,7 +62,7 @@ func main() {
 	for _, v := range verbs {
 		gs, err := sentences.GenerateSentences(v)
 		if err != nil {
-			log.Panicln(err)
+			return err
 		}
 		for _, s := range gs {
 			if lines >= 2000 {
@@ -48,7 +70,7 @@ func main() {
 				index++
 				of, err = getFile(ofn, ofe, index)
 				if err != nil {
-					log.Panicln(err)
+					return err
 				}
 			}
 			fmt.Fprint(of, s.English, ";", s.Português, "\n")
@@ -56,6 +78,7 @@ func main() {
 		}
 	}
 	of.Close()
+	return nil
 }
 
 func getFile(ofn, ofe string, index int) (*os.File, error) {
