@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"path/filepath"
 
 	"github.com/jeremy-spitzig/conjugation-generator/sentences"
 	"github.com/urfave/cli/v2"
@@ -14,9 +15,9 @@ func main() {
 	app := &cli.App{
 		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:  "input",
-				Aliases: []string{"i"},
-				Value: "./default-input.json",
+				Name:  "language-pack",
+				Aliases: []string{"lp"},
+				Value: "./default-language-pack/",
 				Usage: "Load input from `FILE`",
 			},
 			&cli.StringFlag{
@@ -24,18 +25,6 @@ func main() {
 				Aliases: []string{"o"},
 				Value: "output.csv",
 				Usage: "The output file name",
-			},
-			&cli.StringFlag{
-				Name:  "modelsDir",
-				Aliases: []string{"m"},
-				Value: "./default-verb-models",
-				Usage: "Directory containing verb model files",
-			},
-			&cli.StringFlag{
-				Name:  "templatesDir",
-				Aliases: []string{"t"},
-				Value: "./default-sentence-templates",
-				Usage: "Directory containing sentence template files",
 			},
 		},
 		Action: action,
@@ -49,28 +38,27 @@ func main() {
 
 func action(c *cli.Context) error {
 
-	md := c.String("modelsDir")
+	lpd := c.String("language-pack")
+
+	md := filepath.Join(lpd, "models")
 	m, err := verbs.LoadModels(md)
-
 	if err != nil {
 		return err
 	}
 
-	td := c.String("templatesDir")
+	td := filepath.Join(lpd, "templates")
 	t, err := sentences.LoadTemplates(td)
-
 	if err != nil {
 		return err
 	}
 
-	ifn := c.String("input")
+	vfn := filepath.Join(lpd, "verbs.json")
+	verbs, err := verbs.ReadVerbs(vfn)
+	if err != nil {
+		return err
+	}
+
 	ofn := c.String("outputFile")
-
-	verbs, err := verbs.ReadVerbs(ifn)
-	if err != nil {
-		return err
-	}
-
 	of, err := os.OpenFile(ofn, os.O_TRUNC|os.O_CREATE|os.O_RDWR, 0644)
 	if err != nil {
 		return err
