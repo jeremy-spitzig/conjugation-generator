@@ -17,7 +17,7 @@ func main() {
 			&cli.StringFlag{
 				Name:  "language-pack",
 				Aliases: []string{"lp"},
-				Value: "./default-language-pack/",
+				Value: "https://github.com/jeremy-spitzig/brazilian-portuguese-language-pack.git",
 				Usage: "Load language pack from `SOURCE`",
 			},
 			&cli.StringFlag{
