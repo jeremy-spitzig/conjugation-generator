@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -16,23 +15,27 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:  "input",
+				Aliases: []string{"i"},
 				Value: "./default-input.json",
 				Usage: "Load input from `FILE`",
 			},
 			&cli.StringFlag{
-				Name:  "outputFileBase",
-				Value: "output",
-				Usage: "The base of the filenames for output files",
-			},
-			&cli.StringFlag{
-				Name:  "outputFileExtension",
-				Value: ".csv",
-				Usage: "The extension of the filenames for output files",
+				Name:  "outputFile",
+				Aliases: []string{"o"},
+				Value: "output.csv",
+				Usage: "The output file name",
 			},
 			&cli.StringFlag{
 				Name:  "modelsDir",
+				Aliases: []string{"m"},
 				Value: "./default-verb-models",
 				Usage: "Directory containing verb model files",
+			},
+			&cli.StringFlag{
+				Name:  "templatesDir",
+				Aliases: []string{"t"},
+				Value: "./default-sentence-templates",
+				Usage: "Directory containing sentence template files",
 			},
 		},
 		Action: action,
@@ -53,54 +56,36 @@ func action(c *cli.Context) error {
 		return err
 	}
 
+	td := c.String("templatesDir")
+	t, err := sentences.LoadTemplates(td)
+
+	if err != nil {
+		return err
+	}
+
 	ifn := c.String("input")
-	ofn := c.String("outputFileBase")
-	ofe := c.String("outputFileExtension")
+	ofn := c.String("outputFile")
 
 	verbs, err := verbs.ReadVerbs(ifn)
 	if err != nil {
 		return err
 	}
 
-	index := 1
-
-	of, err := getFile(ofn, ofe, index)
+	of, err := os.OpenFile(ofn, os.O_TRUNC|os.O_CREATE|os.O_RDWR, 0644)
 	if err != nil {
 		return err
 	}
-
-	lines := 0
+	defer of.Close()
 
 	for _, v := range verbs {
 		c, err := m.Conjugate(v)
 		if err != nil {
 			return err
 		}
-		gs, err := sentences.GenerateSentences(v, c)
+		err = t.Execute(v, c, of)
 		if err != nil {
 			return err
 		}
-		for _, s := range gs {
-			if lines >= 2000 {
-				lines = 0
-				index++
-				of, err = getFile(ofn, ofe, index)
-				if err != nil {
-					return err
-				}
-			}
-			fmt.Fprint(of, s.English, ";", s.Português, "\n")
-			lines++
-		}
 	}
-	of.Close()
 	return nil
-}
-
-func getFile(ofn, ofe string, index int) (*os.File, error) {
-	of, err := os.OpenFile(fmt.Sprintf("%s-%d%s", ofn, index, ofe), os.O_TRUNC|os.O_CREATE|os.O_RDWR, 0644)
-	if err != nil {
-		return nil, err
-	}
-	return of, nil
 }
