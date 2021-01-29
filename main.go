@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/jeremy-spitzig/conjugation-generator/sentences"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 
 	"github.com/jeremy-spitzig/conjugation-generator/verbs"
 )
