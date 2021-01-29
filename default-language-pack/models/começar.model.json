@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)çar$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms": ["${1}ço", "${1}ças", "${1}ça", "${1}çamos", "${1}çais", "${1}çam"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms": ["${1}cei", "${1}çaste", "${1}çou", "${1}çamos", "${1}çastes", "${1}çaram"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}çava", "${1}çavas", "${1}çava", "${1}çávamos", "${1}çáveis", "${1}çavam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms": ["${1}çara", "${1}çaras", "${1}çara", "${1}çáramos", "${1}çáreis", "${1}çaram"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms": ["tenho ${1}çado", "tens ${1}çado", "tem ${1}çado", "temos ${1}çado", "tendes ${1}çado", "têm ${1}çado"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tinha ${1}çado", "tinhas ${1}çado", "tinha ${1}çado", "tínhamos ${1}çado", "tínheis ${1}çado", "tinham ${1}çado"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms": ["tivera ${1}çado", "tiveras ${1}çado", "tivera ${1}çado", "tivéramos ${1}çado", "tivéreis ${1}çado", "tiveram ${1}çado"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms": ["${1}çarei", "${1}çarás", "${1}çará", "${1}çaremos", "${1}çareis", "${1}çarão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms": ["vou ${1}çar", "vais ${1}çar", "vai ${1}çar", "vamos ${1}çar", "ides ${1}çar", "vão ${1}çar"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms": ["terei ${1}çado", "terás ${1}çado", "terá ${1}çado", "teremos ${1}çado", "tereis ${1}çado", "terão ${1}çado"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms": ["${1}ce", "${1}ces", "${1}ce", "${1}cemos", "${1}ceis", "${1}cem"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms": ["tenha ${1}çado", "tenhas ${1}çado", "tenha ${1}çado", "tenhamos ${1}çado", "tenhais ${1}çado", "tenham ${1}çado"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}çasse", "${1}çasses", "${1}çasse", "${1}çássemos", "${1}çásseis", "${1}çassem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tivesse ${1}çado", "tivesses ${1}çado", "tivesse ${1}çado", "tivéssemos ${1}çado", "tivésseis ${1}çado", "tivessem ${1}çado"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms": ["${1}çar", "${1}çares", "${1}çar", "${1}çarmos", "${1}çardes", "${1}çarem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms": ["tiver ${1}çado", "tiveres ${1}çado", "tiver ${1}çado", "tivermos ${1}çado", "tiverdes ${1}çado", "tiverem ${1}çado"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms": ["${1}çaria", "${1}çarias", "${1}çaria", "${1}çaríamos", "${1}çaríeis", "${1}çariam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms": ["teria ${1}çado", "terias ${1}çado", "teria ${1}çado", "teríamos ${1}çado", "teríeis ${1}çado", "teriam ${1}çado"]},
+	"infinitivo":                                 {"type": "infinitive", "forms": ["${1}çar", "${1}çares", "${1}çarmos", "${1}çardes", "${1}çarem"]},
+	"imperativo":                                 {"type": "imperative", "forms": ["${1}ça", "${1}ce", "${1}cemos", "${1}çai", "${1}cem"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms": ["não ${1}ces", "não ${1}ce", "não ${1}cemos", "não ${1}ceis", "não ${1}cem"]},
+	"gerúndio":                                   {"type": "gerund", "forms": ["${1}çando"]},
+	"particípio":                                 {"type": "participle", "forms": ["${1}çado"]}
+  }
+}

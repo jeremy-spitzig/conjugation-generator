@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)ever$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms":["${1}evo", "${1}eves", "${1}eve", "${1}evemos", "${1}eveis", "${1}evem"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms":["${1}evi", "${1}eveste", "${1}eveu", "${1}evemos", "${1}evestes", "${1}everam"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms":["${1}evia", "${1}evias", "${1}evia", "${1}evíamos", "${1}evíeis", "${1}eviam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms":["${1}evera", "${1}everas", "${1}evera", "${1}evêramos", "${1}evêreis", "${1}everam"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms":["tenho ${1}ito","tens ${1}ito","tem ${1}ito","temos ${1}ito","tendes ${1}ito","têm ${1}ito"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms":["tinha ${1}ito","tinhas ${1}ito","tinha ${1}ito","tínhamos ${1}ito","tínheis ${1}ito","tinham ${1}ito"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms":["tivera ${1}ito","tiveras ${1}ito","tivera ${1}ito","tivéramos ${1}ito","tivéreis ${1}ito","tiveram ${1}ito"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms":["${1}everei", "${1}everás", "${1}everá", "${1}everemos", "${1}evereis", "${1}everão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms":["vou ${1}ever","vais ${1}ever","vai ${1}ever","vamos ${1}ever","ides ${1}ever","vão ${1}ever"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms":["terei ${1}ito","terás ${1}ito","terá ${1}ito","teremos ${1}ito","tereis ${1}ito","terão ${1}ito"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms":["${1}eva", "${1}evas", "${1}eva", "${1}evamos", "${1}evais", "${1}evam"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms":["tenha ${1}ito","tenhas ${1}ito","tenha ${1}ito","tenhamos ${1}ito","tenhais ${1}ito","tenham ${1}ito"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms":["${1}evesse", "${1}evesses", "${1}evesse", "${1}evêssemos", "${1}evêsseis", "${1}evessem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms":["tivesse ${1}ito","tivesses ${1}ito","tivesse ${1}ito","tivéssemos ${1}ito","tivésseis ${1}ito","tivessem ${1}ito"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms":["${1}ever", "${1}everes", "${1}ever", "${1}evermos", "${1}everdes", "${1}everem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms":["tiver ${1}ito","tiveres ${1}ito","tiver ${1}ito","tivermos ${1}ito","tiverdes ${1}ito","tiverem ${1}ito"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms":["${1}everia", "${1}everias", "${1}everia", "${1}everíamos", "${1}everíeis", "${1}everiam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms":["teria ${1}ito","terias ${1}ito","teria ${1}ito","teríamos ${1}ito","teríeis ${1}ito","teriam ${1}ito"]},
+	"infinitivo":                                 {"type": "infinitive", "forms":["${1}ever", "${1}everes", "${1}evermos", "${1}everdes", "${1}everem"]},
+	"imperativo":                                 {"type": "imperative", "forms":["${1}eve", "${1}eva", "${1}evamos", "${1}evei", "${1}evam"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms":["não ${1}evas", "não ${1}eva", "não ${1}evamos", "não ${1}evais", "não ${1}evam"]},
+	"gerúndio":                                   {"type": "gerund", "forms":["${1}evendo"]},
+	"particípio":                                 {"type": "participle", "forms":["${1}ito"]}
+  }
+}

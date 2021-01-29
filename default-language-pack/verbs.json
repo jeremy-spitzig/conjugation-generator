@@ -9,7 +9,7 @@
     "past": "visited",
     "exampleComplement": "Idaho",
     "portugueseExampleComplement": "Idaho",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "encontrar",
@@ -21,7 +21,7 @@
     "past": "met",
     "exampleComplement": "Bruce Willis",
     "portugueseExampleComplement": "o Bruce Willis",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "ficar",
@@ -33,7 +33,7 @@
     "past": "stayed",
     "exampleComplement": "here",
     "portugueseExampleComplement": "aqui",
-    "model": "ar"
+    "model": "ficar"
   },
   {
     "portugueseInfinitive": "abraçar",
@@ -45,7 +45,7 @@
     "past": "hugged",
     "exampleComplement": "a dog",
     "portugueseExampleComplement": "um cachorro",
-    "model": "ar"
+    "model": "começar"
   },
   {
     "portugueseInfinitive": "cortar",
@@ -57,7 +57,7 @@
     "past": "cut",
     "exampleComplement": "the onion",
     "portugueseExampleComplement": "a cebola",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "jogar",
@@ -69,7 +69,7 @@
     "past": "played",
     "exampleComplement": "the game",
     "portugueseExampleComplement": "o jogo",
-    "model": "ar"
+    "model": "chegar"
   },
   {
     "portugueseInfinitive": "brincar",
@@ -81,7 +81,7 @@
     "past": "played",
     "exampleComplement": "the game",
     "portugueseExampleComplement": "o jogo",
-    "model": "ar"
+    "model": "ficar"
   },
   {
     "portugueseInfinitive": "pegar",
@@ -93,7 +93,7 @@
     "past": "caught",
     "exampleComplement": "a tiger",
     "portugueseExampleComplement": "um tigre",
-    "model": "ar"
+    "model": "chegar"
   },
   {
     "portugueseInfinitive": "esconder",
@@ -105,7 +105,7 @@
     "past": "hid",
     "exampleComplement": "the chocolate",
     "portugueseExampleComplement": "o chocolate",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "morar",
@@ -117,7 +117,7 @@
     "past": "lived",
     "exampleComplement": "happily",
     "portugueseExampleComplement": "felizamente",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "aprender",
@@ -129,7 +129,7 @@
     "past": "learned",
     "exampleComplement": "to swim",
     "portugueseExampleComplement": "a nadar",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "aceitar",
@@ -141,7 +141,7 @@
     "past": "accepted",
     "exampleComplement": "an idea",
     "portugueseExampleComplement": "uma ideia",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "trabalhar",
@@ -153,7 +153,7 @@
     "past": "worked",
     "exampleComplement": "as an engineer",
     "portugueseExampleComplement": "como um engenheiro",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "correr",
@@ -165,7 +165,7 @@
     "past": "ran",
     "exampleComplement": "to the pool",
     "portugueseExampleComplement": "pra piscina",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "caçar",
@@ -177,7 +177,7 @@
     "past": "hunted",
     "exampleComplement": "the duck",
     "portugueseExampleComplement": "o pato",
-    "model": "ar"
+    "model": "começar"
   },
   {
     "portugueseInfinitive": "escrever",
@@ -189,7 +189,7 @@
     "past": "wrote",
     "exampleComplement": "a book",
     "portugueseExampleComplement": "um livro",
-    "model": "er"
+    "model": "escrever"
   },
   {
     "portugueseInfinitive": "estudar",
@@ -201,7 +201,7 @@
     "past": "studied",
     "exampleComplement": "the letter",
     "portugueseExampleComplement": "a carta",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "chegar",
@@ -213,7 +213,7 @@
     "past": "arrived",
     "exampleComplement": "in Brazil",
     "portugueseExampleComplement": "no Brazil",
-    "model": "ar"
+    "model": "chegar"
   },
   {
     "portugueseInfinitive": "acordar",
@@ -225,7 +225,7 @@
     "past": "woke up",
     "exampleComplement": "in the morning",
     "portugueseExampleComplement": "na manhã",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "gostar",
@@ -237,7 +237,7 @@
     "past": "liked",
     "exampleComplement": "to eat",
     "portugueseExampleComplement": "de comer",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "falar",
@@ -249,7 +249,7 @@
     "past": "spoke",
     "exampleComplement": "to the man",
     "portugueseExampleComplement": "ao homem",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "melhorar",
@@ -261,7 +261,7 @@
     "past": "improved",
     "exampleComplement": "my Portuguese",
     "portugueseExampleComplement": "meu Português",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "conversar",
@@ -273,7 +273,7 @@
     "past": "talked",
     "exampleComplement": "with the man",
     "portugueseExampleComplement": "com o homem",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "começar",
@@ -285,7 +285,7 @@
     "past": "began",
     "exampleComplement": "working",
     "portugueseExampleComplement": "trabalhando",
-    "model": "ar"
+    "model": "começar"
   },
   {
     "portugueseInfinitive": "terminar",
@@ -297,7 +297,7 @@
     "past": "finished",
     "exampleComplement": "the book",
     "portugueseExampleComplement": "o livro",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "almoçar",
@@ -309,7 +309,7 @@
     "past": "ate lunch",
     "exampleComplement": "at noon",
     "portugueseExampleComplement": "ao meio dia",
-    "model": "ar"
+    "model": "começar"
   },
   {
     "portugueseInfinitive": "achar",
@@ -321,7 +321,7 @@
     "past": "found",
     "exampleComplement": "the key",
     "portugueseExampleComplement": "a chave",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "entender",
@@ -333,7 +333,7 @@
     "past": "understood",
     "exampleComplement": "the sentence",
     "portugueseExampleComplement": "a frase",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "viajar",
@@ -345,7 +345,7 @@
     "past": "traveled",
     "exampleComplement": "through the country",
     "portugueseExampleComplement": "pelo país",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "assistir",
@@ -357,7 +357,7 @@
     "past": "watched",
     "exampleComplement": "Netflix",
     "portugueseExampleComplement": "o Netflix",
-    "model": "ir"
+    "model": "garantir"
   },
   {
     "portugueseInfinitive": "passear",
@@ -369,7 +369,7 @@
     "past": "walked",
     "exampleComplement": "quickly",
     "portugueseExampleComplement": "rapidamente",
-    "model": "ar"
+    "model": "recear"
   },
   {
     "portugueseInfinitive": "tomar",
@@ -381,7 +381,7 @@
     "past": "drank",
     "exampleComplement": "water",
     "portugueseExampleComplement": "água",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "ajudar",
@@ -393,7 +393,7 @@
     "past": "helped",
     "exampleComplement": "the sick dog",
     "portugueseExampleComplement": "o cachorro doente",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "cuidar",
@@ -405,7 +405,7 @@
     "past": "took care of",
     "exampleComplement": "a friend",
     "portugueseExampleComplement": "um amigo",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "ensinar",
@@ -417,7 +417,7 @@
     "past": "taught",
     "exampleComplement": "the class",
     "portugueseExampleComplement": "o classe",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "abastecer",
@@ -429,7 +429,7 @@
     "past": "fueled",
     "exampleComplement": "the car",
     "portugueseExampleComplement": "o carro",
-    "model": "er"
+    "model": "acontecer"
   },
   {
     "portugueseInfinitive": "comercializar",
@@ -441,7 +441,7 @@
     "past": "commercialized",
     "exampleComplement": "profitably",
     "portugueseExampleComplement": "lucrativamente",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "apoderar",
@@ -453,7 +453,7 @@
     "past": "took control",
     "exampleComplement": "of the store",
     "portugueseExampleComplement": "da loja",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "engolir",
@@ -465,7 +465,7 @@
     "past": "swallowed",
     "exampleComplement": "a pill",
     "portugueseExampleComplement": "um comprimindo",
-    "model": "ir"
+    "model": "engolir"
   },
   {
     "portugueseInfinitive": "convidar",
@@ -477,7 +477,7 @@
     "past": "invited",
     "exampleComplement": "to my house",
     "portugueseExampleComplement": "à minha casa",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "adorar",
@@ -489,7 +489,7 @@
     "past": "loved",
     "exampleComplement": "the dinner",
     "portugueseExampleComplement": "o jantar",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "facilitar",
@@ -501,7 +501,7 @@
     "past": "facilitated",
     "exampleComplement": "the meeting",
     "portugueseExampleComplement": "a reunião",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "contar",
@@ -513,7 +513,7 @@
     "past": "counted",
     "exampleComplement": "the people",
     "portugueseExampleComplement": "as pessoas",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "oferecer",
@@ -525,7 +525,7 @@
     "past": "offered",
     "exampleComplement": "an idea",
     "portugueseExampleComplement": "uma ideia",
-    "model": "er"
+    "model": "acontecer"
   },
   {
     "portugueseInfinitive": "armar",
@@ -537,7 +537,7 @@
     "past": "armed",
     "exampleComplement": "the weapon",
     "portugueseExampleComplement": "a arma",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "vender",
@@ -549,7 +549,7 @@
     "past": "sold",
     "exampleComplement": "vegetables",
     "portugueseExampleComplement": "legumes",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "voltar",
@@ -561,7 +561,7 @@
     "past": "returned",
     "exampleComplement": "home",
     "portugueseExampleComplement": "para casa",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "desfilar",
@@ -573,7 +573,7 @@
     "past": "paraded",
     "exampleComplement": "through the streets",
     "portugueseExampleComplement": "pelas ruas",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "realizar",
@@ -585,7 +585,7 @@
     "past": "performed",
     "exampleComplement": "this operation",
     "portugueseExampleComplement": "esta operação",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "cantar",
@@ -597,7 +597,7 @@
     "past": "sang",
     "exampleComplement": "a song",
     "portugueseExampleComplement": "uma canção",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "mexer",
@@ -609,7 +609,7 @@
     "past": "stirred",
     "exampleComplement": "the batter",
     "portugueseExampleComplement": "a massa",
-    "model": "er"
+    "model": "vender"
   },
   {
     "portugueseInfinitive": "passar",
@@ -621,7 +621,7 @@
     "past": "passed",
     "exampleComplement": "by the store",
     "portugueseExampleComplement": "pela loja",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "pagar",
@@ -633,7 +633,7 @@
     "past": "paid",
     "exampleComplement": "the bill",
     "portugueseExampleComplement": "a conta",
-    "model": "ar"
+    "model": "pagar"
   },
   {
     "portugueseInfinitive": "levar",
@@ -645,7 +645,7 @@
     "past": "took",
     "exampleComplement": "an apple",
     "portugueseExampleComplement": "uma macã",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "olhar",
@@ -657,7 +657,7 @@
     "past": "looked",
     "exampleComplement": "over there",
     "portugueseExampleComplement": "lá",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "desovar",
@@ -669,7 +669,7 @@
     "past": "liquidated",
     "exampleComplement": "the products",
     "portugueseExampleComplement": "os produtos",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "descansar",
@@ -681,7 +681,7 @@
     "past": "rested",
     "exampleComplement": "all day",
     "portugueseExampleComplement": "o dia tudo",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "aparecer",
@@ -693,7 +693,7 @@
     "past": "appeared",
     "exampleComplement": "in front of me",
     "portugueseExampleComplement": "na minha frente",
-    "model": "er"
+    "model": "acontecer"
   },
   {
     "portugueseInfinitive": "significar",
@@ -705,7 +705,7 @@
     "past": "meant",
     "exampleComplement": "the truth",
     "portugueseExampleComplement": "a verdade",
-    "model": "ar"
+    "model": "ficar"
   },
   {
     "portugueseInfinitive": "separar",
@@ -717,7 +717,7 @@
     "past": "separated",
     "exampleComplement": "the slices",
     "portugueseExampleComplement": "as fatias",
-    "model": "ar"
+    "model": "anunciar"
   },
   {
     "portugueseInfinitive": "fritar",
@@ -729,6 +729,6 @@
     "past": "fried",
     "exampleComplement": "an onion",
     "portugueseExampleComplement": "uma cebola",
-    "model": "ar"
+    "model": "anunciar"
   }
 ]

@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)gar$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms": ["${1}go", "${1}gas", "${1}ga", "${1}gamos", "${1}gais", "${1}gam"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms": ["${1}guei", "${1}gaste", "${1}gou", "${1}gamos", "${1}gastes", "${1}garam"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}gava", "${1}gavas", "${1}gava", "${1}gávamos", "${1}gáveis", "${1}gavam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms": ["${1}gara", "${1}garas", "${1}gara", "${1}gáramos", "${1}gáreis", "${1}garam"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms": ["tenho ${1}gado", "tens ${1}gado", "tem ${1}gado", "temos ${1}gado", "tendes ${1}gado", "têm ${1}gado"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tinha ${1}gado", "tinhas ${1}gado", "tinha ${1}gado", "tínhamos ${1}gado", "tínheis ${1}gado", "tinham ${1}gado"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms": ["tivera ${1}gado", "tiveras ${1}gado", "tivera ${1}gado", "tivéramos ${1}gado", "tivéreis ${1}gado", "tiveram ${1}gado"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms": ["${1}garei", "${1}garás", "${1}gará", "${1}garemos", "${1}gareis", "${1}garão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms": ["vou ${1}gar", "vais ${1}gar", "vai ${1}gar", "vamos ${1}gar", "ides ${1}gar", "vão ${1}gar"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms": ["terei ${1}gado", "terás ${1}gado", "terá ${1}gado", "teremos ${1}gado", "tereis ${1}gado", "terão ${1}gado"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms": ["${1}gue", "${1}gues", "${1}gue", "${1}guemos", "${1}gueis", "${1}guem"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms": ["tenha ${1}gado", "tenhas ${1}gado", "tenha ${1}gado", "tenhamos ${1}gado", "tenhais ${1}gado", "tenham ${1}gado"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}gasse", "${1}gasses", "${1}gasse", "${1}gássemos", "${1}gásseis", "${1}gassem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tivesse ${1}gado", "tivesses ${1}gado", "tivesse ${1}gado", "tivéssemos ${1}gado", "tivésseis ${1}gado", "tivessem ${1}gado"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms": ["${1}gar", "${1}gares", "${1}gar", "${1}garmos", "${1}gardes", "${1}garem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms": ["tiver ${1}gado", "tiveres ${1}gado", "tiver ${1}gado", "tivermos ${1}gado", "tiverdes ${1}gado", "tiverem ${1}gado"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms": ["${1}garia", "${1}garias", "${1}garia", "${1}garíamos", "${1}garíeis", "${1}gariam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms": ["teria ${1}gado", "terias ${1}gado", "teria ${1}gado", "teríamos ${1}gado", "teríeis ${1}gado", "teriam ${1}gado"]},
+	"infinitivo":                                 {"type": "infinitive", "forms": ["${1}gar", "${1}gares", "${1}garmos", "${1}gardes", "${1}garem"]},
+	"imperativo":                                 {"type": "imperative", "forms": ["${1}ga", "${1}gue", "${1}guemos", "${1}gai", "${1}guem"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms": ["não ${1}gues", "não ${1}gue", "não ${1}guemos", "não ${1}gueis", "não ${1}guem"]},
+	"gerúndio":                                   {"type": "gerund", "forms": ["${1}gando"]},
+	"particípio":                                 {"type": "participle", "forms": ["${1}gado"]}
+  }
+}

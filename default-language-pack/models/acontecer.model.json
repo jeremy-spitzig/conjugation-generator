@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)cer$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms":["${1}ço", "${1}ces", "${1}ce", "${1}cemos", "${1}ceis", "${1}cem"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms":["${1}ci", "${1}ceste", "${1}ceu", "${1}cemos", "${1}cestes", "${1}ceram"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms":["${1}cia", "${1}cias", "${1}cia", "${1}cíamos", "${1}cíeis", "${1}ciam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms":["${1}cera", "${1}ceras", "${1}cera", "${1}cêramos", "${1}cêreis", "${1}ceram"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms":["tenho ${1}cido","tens ${1}cido","tem ${1}cido","temos ${1}cido","tendes ${1}cido","têm ${1}cido"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms":["tinha ${1}cido","tinhas ${1}cido","tinha ${1}cido","tínhamos ${1}cido","tínheis ${1}cido","tinham ${1}cido"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms":["tivera ${1}cido","tiveras ${1}cido","tivera ${1}cido","tivéramos ${1}cido","tivéreis ${1}cido","tiveram ${1}cido"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms":["${1}cerei", "${1}cerás", "${1}cerá", "${1}ceremos", "${1}cereis", "${1}cerão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms":["vou ${1}cer","vais ${1}cer","vai ${1}cer","vamos ${1}cer","ides ${1}cer","vão ${1}cer"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms":["terei ${1}cido","terás ${1}cido","terá ${1}cido","teremos ${1}cido","tereis ${1}cido","terão ${1}cido"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms":["${1}ça", "${1}ças", "${1}ça", "${1}çamos", "${1}çais", "${1}çam"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms":["tenha ${1}cido","tenhas ${1}cido","tenha ${1}cido","tenhamos ${1}cido","tenhais ${1}cido","tenham ${1}cido"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms":["${1}cesse", "${1}cesses", "${1}cesse", "${1}cêssemos", "${1}cêsseis", "${1}cessem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms":["tivesse ${1}cido","tivesses ${1}cido","tivesse ${1}cido","tivéssemos ${1}cido","tivésseis ${1}cido","tivessem ${1}cido"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms":["${1}cer", "${1}ceres", "${1}cer", "${1}cermos", "${1}cerdes", "${1}cerem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms":["tiver ${1}cido","tiveres ${1}cido","tiver ${1}cido","tivermos ${1}cido","tiverdes ${1}cido","tiverem ${1}cido"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms":["${1}ceria", "${1}cerias", "${1}ceria", "${1}ceríamos", "${1}ceríeis", "${1}ceriam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms":["teria ${1}cido","terias ${1}cido","teria ${1}cido","teríamos ${1}cido","teríeis ${1}cido","teriam ${1}cido"]},
+	"infinitivo":                                 {"type": "infinitive", "forms":["${1}cer", "${1}ceres", "${1}cermos", "${1}cerdes", "${1}cerem"]},
+	"imperativo":                                 {"type": "imperative", "forms":["${1}ce", "${1}ça", "${1}çamos", "${1}cei", "${1}çam"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms":["não ${1}ças", "não ${1}ça", "não ${1}çamos", "não ${1}çais", "não ${1}çam"]},
+	"gerúndio":                                   {"type": "gerund", "forms":["${1}cendo"]},
+	"particípio":                                 {"type": "participle", "forms":["${1}cido"]}
+  }
+}

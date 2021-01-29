@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)car$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms": ["${1}co", "${1}cas", "${1}ca", "${1}camos", "${1}cais", "${1}cam"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms": ["${1}quei", "${1}caste", "${1}cou", "${1}camos", "${1}castes", "${1}caram"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}cava", "${1}cavas", "${1}cava", "${1}cávamos", "${1}cáveis", "${1}cavam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms": ["${1}cara", "${1}caras", "${1}cara", "${1}cáramos", "${1}cáreis", "${1}caram"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms": ["tenho ${1}cado", "tens ${1}cado", "tem ${1}cado", "temos ${1}cado", "tendes ${1}cado", "têm ${1}cado"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tinha ${1}cado", "tinhas ${1}cado", "tinha ${1}cado", "tínhamos ${1}cado", "tínheis ${1}cado", "tinham ${1}cado"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms": ["tivera ${1}cado", "tiveras ${1}cado", "tivera ${1}cado", "tivéramos ${1}cado", "tivéreis ${1}cado", "tiveram ${1}cado"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms": ["${1}carei", "${1}carás", "${1}cará", "${1}caremos", "${1}careis", "${1}carão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms": ["vou ${1}car", "vais ${1}car", "vai ${1}car", "vamos ${1}car", "ides ${1}car", "vão ${1}car"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms": ["terei ${1}cado", "terás ${1}cado", "terá ${1}cado", "teremos ${1}cado", "tereis ${1}cado", "terão ${1}cado"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms": ["${1}que", "${1}ques", "${1}que", "${1}quemos", "${1}queis", "${1}quem"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms": ["tenha ${1}cado", "tenhas ${1}cado", "tenha ${1}cado", "tenhamos ${1}cado", "tenhais ${1}cado", "tenham ${1}cado"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}casse", "${1}casses", "${1}casse", "${1}cássemos", "${1}cásseis", "${1}cassem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tivesse ${1}cado", "tivesses ${1}cado", "tivesse ${1}cado", "tivéssemos ${1}cado", "tivésseis ${1}cado", "tivessem ${1}cado"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms": ["${1}car", "${1}cares", "${1}car", "${1}carmos", "${1}cardes", "${1}carem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms": ["tiver ${1}cado", "tiveres ${1}cado", "tiver ${1}cado", "tivermos ${1}cado", "tiverdes ${1}cado", "tiverem ${1}cado"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms": ["${1}caria", "${1}carias", "${1}caria", "${1}caríamos", "${1}caríeis", "${1}cariam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms": ["teria ${1}cado", "terias ${1}cado", "teria ${1}cado", "teríamos ${1}cado", "teríeis ${1}cado", "teriam ${1}cado"]},
+	"infinitivo":                                 {"type": "infinitive", "forms": ["${1}car", "${1}cares", "${1}carmos", "${1}cardes", "${1}carem"]},
+	"imperativo":                                 {"type": "imperative", "forms": ["${1}ca", "${1}que", "${1}quemos", "${1}cai", "${1}quem"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms": ["não ${1}ques", "não ${1}que", "não ${1}quemos", "não ${1}queis", "não ${1}quem"]},
+	"gerúndio":                                   {"type": "gerund", "forms": ["${1}cando"]},
+	"particípio":                                 {"type": "participle", "forms": ["${1}cado"]}
+  }
+}

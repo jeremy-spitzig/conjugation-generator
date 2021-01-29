@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)ar$",
+  "tenses": {
+    "indicativoPresente":                         {"type": "regular", "forms": ["${1}o", "${1}as", "${1}a", "${1}amos", "${1}ais", "${1}am"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms": ["${1}uei", "${1}aste", "${1}ou", "${1}amos", "${1}astes", "${1}aram"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}ava", "${1}avas", "${1}ava", "${1}ávamos", "${1}áveis", "${1}avam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms": ["${1}ara", "${1}aras", "${1}ara", "${1}áramos", "${1}áreis", "${1}aram"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms": ["tenho ${1}ado", "tens ${1}ado", "tem ${1}ado", "temos ${1}ado", "tendes ${1}ado", "têm ${1}ado"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tinha ${1}ado", "tinhas ${1}ado", "tinha ${1}ado", "tínhamos ${1}ado", "tínheis ${1}ado", "tinham ${1}ado"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms": ["tivera ${1}ado", "tiveras ${1}ado", "tivera ${1}ado", "tivéramos ${1}ado", "tivéreis ${1}ado", "tiveram ${1}ado"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms": ["${1}arei", "${1}arás", "${1}ará", "${1}aremos", "${1}areis", "${1}arão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms": ["vou ${1}ar", "vais ${1}ar", "vai ${1}ar", "vamos ${1}ar", "ides ${1}ar", "vão ${1}ar"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms": ["terei ${1}ado", "terás ${1}ado", "terá ${1}ado", "teremos ${1}ado", "tereis ${1}ado", "terão ${1}ado"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms": ["${1}ue", "${1}ues", "${1}ue", "${1}uemos", "${1}ueis", "${1}uem"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms": ["tenha ${1}ado", "tenhas ${1}ado", "tenha ${1}ado", "tenhamos ${1}ado", "tenhais ${1}ado", "tenham ${1}ado"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}asse", "${1}asses", "${1}asse", "${1}ássemos", "${1}ásseis", "${1}assem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tivesse ${1}ado", "tivesses ${1}ado", "tivesse ${1}ado", "tivéssemos ${1}ado", "tivésseis ${1}ado", "tivessem ${1}ado"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms": ["${1}ar", "${1}ares", "${1}ar", "${1}armos", "${1}ardes", "${1}arem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms": ["tiver ${1}ado", "tiveres ${1}ado", "tiver ${1}ado", "tivermos ${1}ado", "tiverdes ${1}ado", "tiverem ${1}ado"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms": ["${1}aria", "${1}arias", "${1}aria", "${1}aríamos", "${1}aríeis", "${1}ariam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms": ["teria ${1}ado", "terias ${1}ado", "teria ${1}ado", "teríamos ${1}ado", "teríeis ${1}ado", "teriam ${1}ado"]},
+	"infinitivo":                                 {"type": "infinitive", "forms": ["${1}ar", "${1}ares", "${1}armos", "${1}ardes", "${1}arem"]},
+	"imperativo":                                 {"type": "imperative", "forms": ["${1}a", "${1}ue", "${1}uemos", "${1}ai", "${1}uem"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms": ["não ${1}ues", "não ${1}ue", "não ${1}uemos", "não ${1}ueis", "não ${1}uem"]},
+	"gerúndio":                                   {"type": "gerund", "forms": ["${1}ando"]},
+	"particípio":                                 {"type": "participle", "forms": ["${1}ado"]}
+  }
+}

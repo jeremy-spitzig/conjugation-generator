@@ -1,0 +1,28 @@
+{
+  "capture": "^(.*)olir$",
+  "tenses": {
+	"indicativoPresente":                         {"type": "regular", "forms": ["${1}ulo", "${1}oles", "${1}ole", "${1}olimos", "${1}olis", "${1}olem"]},
+	"indicativoPretéritoPerfeito":                {"type": "regular", "forms": ["${1}oli", "${1}oliste", "${1}oliu", "${1}olimos", "${1}olistes", "${1}oliram"]},
+	"indicativoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}olia", "${1}olias", "${1}olia", "${1}olíamos", "${1}olíeis", "${1}oliam"]},
+	"indicativoPretéritoMaisQuePerfeito":         {"type": "regular", "forms": ["${1}olira", "${1}oliras", "${1}olira", "${1}olíramos", "${1}olíreis", "${1}oliram"]},
+	"indicativoPretéritoPerfeitoComposto":        {"type": "regular", "forms": ["tenho ${1}olido","tens ${1}olido","tem ${1}olido","temos ${1}olido","tendes ${1}olido","têm ${1}olido"]},
+	"indicativoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tinha ${1}olido","tinhas ${1}olido","tinha ${1}olido","tínhamos ${1}olido","tínheis ${1}olido","tinham ${1}olido"]},
+	"indicativoPretéritoMaisQuePerfeitoAnterior": {"type": "regular", "forms": ["tivera ${1}olido","tiveras ${1}olido","tivera ${1}olido","tivéramos ${1}olido","tivéreis ${1}olido","tiveram ${1}olido"]},
+	"indicativoFuturoDoPresenteSimples":          {"type": "regular", "forms": ["${1}olirei", "${1}olirás", "${1}olirá", "${1}oliremos", "${1}olireis", "${1}olirão"]},
+	"indicativoFuturoCompostoComIr":              {"type": "regular", "forms": ["vou ${1}olir","vais ${1}olir","vai ${1}olir","vamos ${1}olir","ides ${1}olir","vão ${1}olir"]},
+	"indicativoFuturoDoPresenteComposto":         {"type": "regular", "forms": ["terei ${1}olido","terás ${1}olido","terá ${1}olido","teremos ${1}olido","tereis ${1}olido","terão ${1}olido"]},
+	"subjuntivoPresente":                         {"type": "regular", "forms": ["${1}ula", "${1}ulas", "${1}ula", "${1}ulamos", "${1}ulais", "${1}ulam"]},
+	"subjuntivoPretéritoPerfeito":                {"type": "regular", "forms": ["tenha ${1}olido","tenhas ${1}olido","tenha ${1}olido","tenhamos ${1}olido","tenhais ${1}olido","tenham ${1}olido"]},
+	"subjuntivoPretéritoImperfeito":              {"type": "regular", "forms": ["${1}olisse", "${1}olisses", "${1}olisse", "${1}olíssemos", "${1}olísseis", "${1}olissem"]},
+	"subjuntivoPretéritoMaisQuePerfeitoComposto": {"type": "regular", "forms": ["tivesse ${1}olido","tivesses ${1}olido","tivesse ${1}olido","tivéssemos ${1}olido","tivésseis ${1}olido","tivessem ${1}olido"]},
+	"subjuntivoFuturo":                           {"type": "regular", "forms": ["${1}olir", "${1}olires", "${1}olir", "${1}olirmos", "${1}olirdes", "${1}olirem"]},
+	"subjuntivoFuturoComposto":                   {"type": "regular", "forms": ["tiver ${1}olido","tiveres ${1}olido","tiver ${1}olido","tivermos ${1}olido","tiverdes ${1}olido","tiverem ${1}olido"]},
+	"condicionalFuturoDoPretéritoSimples":        {"type": "regular", "forms": ["${1}oliria", "${1}olirias", "${1}oliria", "${1}oliríamos", "${1}oliríeis", "${1}oliriam"]},
+	"futuroDoPretéritoComposto":                  {"type": "regular", "forms": ["teria ${1}olido","terias ${1}olido","teria ${1}olido","teríamos ${1}olido","teríeis ${1}olido","teriam ${1}olido"]},
+	"infinitivo":                                 {"type": "infinitive", "forms": ["${1}olir", "${1}olares", "${1}olirmos", "${1}olirdes", "${1}olirem"]},
+	"imperativo":                                 {"type": "imperative", "forms": ["${1}ole", "${1}ula", "${1}ulamos", "${1}oli", "${1}ulam"]},
+	"imperativoNegativo":                         {"type": "imperative", "forms": ["${1}ulas", "${1}ula", "${1}ulamos", "${1}ulais", "${1}ulam"]},
+	"gerúndio":                                   {"type": "gerund", "forms": ["${1}olindo"]},
+	"particípio":                                 {"type": "participle", "forms": ["${1}olido"]}
+  }
+}
