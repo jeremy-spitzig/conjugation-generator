@@ -15,16 +15,16 @@ func main() {
 	app := &cli.App{
 		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:  "language-pack",
+				Name:    "language-pack",
 				Aliases: []string{"lp"},
-				Value: "https://github.com/jeremy-spitzig/brazilian-portuguese-language-pack.git",
-				Usage: "Load language pack from `SOURCE`",
+				Value:   "https://github.com/jeremy-spitzig/brazilian-portuguese-language-pack.git",
+				Usage:   "Load language pack from `SOURCE`",
 			},
 			&cli.StringFlag{
-				Name:  "outputFile",
+				Name:    "outputFile",
 				Aliases: []string{"o"},
-				Value: "output.csv",
-				Usage: "The output file name",
+				Value:   "output.csv",
+				Usage:   "The output file name",
 			},
 		},
 		Action: action,
@@ -40,7 +40,7 @@ func action(c *cli.Context) error {
 
 	lps := c.String("language-pack")
 	var lp languagepack.LanguagePack
-	if(strings.HasPrefix(lps, "https://")) {
+	if strings.HasPrefix(lps, "https://") {
 		glp, err := languagepack.NewGit(lps)
 		if err != nil {
 			return err

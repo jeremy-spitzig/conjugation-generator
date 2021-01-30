@@ -49,7 +49,7 @@ func (ms *Models) Conjugate(v Verb) (*Conjugation, error) {
 		if err != nil {
 			return nil, err
 		}
-		exec := func(f func()(interface{}, error)) interface{} {
+		exec := func(f func() (interface{}, error)) interface{} {
 			if err != nil {
 				return nil
 			}
@@ -60,11 +60,11 @@ func (ms *Models) Conjugate(v Verb) (*Conjugation, error) {
 		for key, tense := range m.Tenses {
 			switch tense.TenseType {
 			case "regular":
-				conjugation[key] = exec(func() (interface{}, error) {return conjugateVerbTense(v, tense, capture)})
+				conjugation[key] = exec(func() (interface{}, error) { return conjugateVerbTense(v, tense, capture) })
 			case "infinitive":
-				conjugation[key] = exec(func() (interface{}, error) {return conjugateInfinitiveVerbTense(v, tense, capture)})
+				conjugation[key] = exec(func() (interface{}, error) { return conjugateInfinitiveVerbTense(v, tense, capture) })
 			case "imperative":
-				conjugation[key] = exec(func() (interface{}, error) {return conjugateImperativeVerbTense(v, tense, capture)})
+				conjugation[key] = exec(func() (interface{}, error) { return conjugateImperativeVerbTense(v, tense, capture) })
 			case "gerund":
 				conjugation[key] = capture.ReplaceAllString(v.PortugueseInfinitive, tense.Forms[0])
 			case "participle":
@@ -74,7 +74,7 @@ func (ms *Models) Conjugate(v Verb) (*Conjugation, error) {
 				return nil, err
 			}
 		}
-		return &Conjugation{ conjugation }, nil
+		return &Conjugation{conjugation}, nil
 	} else {
 		return nil, fmt.Errorf("Unrecognized verb type %s", v.Model)
 	}

@@ -3,12 +3,12 @@ package languagepack
 import "io"
 
 type ModelInput struct {
-	Name string
+	Name   string
 	Reader io.Reader
 }
 
 type TemplateInput struct {
-	Name string
+	Name   string
 	Reader io.Reader
 }
 

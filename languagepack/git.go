@@ -18,7 +18,7 @@ func NewGit(url string) (LanguagePack, error) {
 		return nil, err
 	}
 	_, err = git.PlainClone(d, false, &git.CloneOptions{
-		URL: url,
+		URL:      url,
 		Progress: os.Stdout,
 	})
 	if err != nil {

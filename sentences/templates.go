@@ -12,8 +12,8 @@ type Templates struct {
 	template *template.Template
 }
 
-type templateData struct{
-	Verb verbs.Verb
+type templateData struct {
+	Verb  verbs.Verb
 	Tense interface{}
 }
 
@@ -40,7 +40,7 @@ func (t *Templates) Execute(v verbs.Verb, c *verbs.Conjugation, w io.Writer) err
 		}
 		var td templateData
 
-		switch vt.(type){
+		switch vt.(type) {
 		case *verbs.VerbTense:
 			td = templateData{v, *(vt.(*verbs.VerbTense))}
 		case *verbs.InfinitiveVerbTense:

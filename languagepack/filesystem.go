@@ -9,8 +9,8 @@ import (
 )
 
 type fileSystem struct {
-	rootDirectoryName 	string
-	openFiles 			[]*os.File
+	rootDirectoryName string
+	openFiles         []*os.File
 }
 
 func (fs *fileSystem) addOpenFile(f *os.File) {
@@ -50,7 +50,7 @@ func (fs *fileSystem) Models() ([]ModelInput, error) {
 			}
 			fs.addOpenFile(f)
 			mis = append(mis, ModelInput{
-				Name: strings.TrimSuffix(fn, modelSuffix),
+				Name:   strings.TrimSuffix(fn, modelSuffix),
 				Reader: f,
 			})
 		}
@@ -77,7 +77,7 @@ func (fs *fileSystem) Templates() ([]TemplateInput, error) {
 			}
 			fs.addOpenFile(f)
 			tis = append(tis, TemplateInput{
-				Name: strings.TrimSuffix(fn, templateSuffix),
+				Name:   strings.TrimSuffix(fn, templateSuffix),
 				Reader: f,
 			})
 		}
